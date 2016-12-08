@@ -404,7 +404,7 @@ GameObject:
   - 222: {fileID: 258842399}
   - 114: {fileID: 258842398}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Tagline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1473,7 +1473,7 @@ GameObject:
   - 222: {fileID: 603691716}
   - 114: {fileID: 603691715}
   m_Layer: 5
-  m_Name: Background (1)
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1138637030}
   m_Horizontal: 0
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -1812,7 +1812,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 806275597}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: MainGUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2050,7 +2050,7 @@ GameObject:
   - 222: {fileID: 1028036359}
   - 114: {fileID: 1028036358}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Mixed NKPG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3475,7 +3475,7 @@ GameObject:
   - 114: {fileID: 1800219439}
   - 114: {fileID: 1800219438}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
