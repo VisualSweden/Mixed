@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ChromakeyMaterial
+  m_Name: KlasseChromaKey
   m_Shader: {fileID: 4800000, guid: c76936b74b3411f48afc2c4b240f8622, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -34,4 +34,4 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _keyingColor
-      second: {r: 0.44705883, g: 0.654902, b: 0.40784314, a: 1}
+      second: {r: 0.3764706, g: 1, b: 0.14901961, a: 1}
