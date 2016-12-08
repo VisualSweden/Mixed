@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="IMG_20161207_141332" size="0.400000 0.300000" />
+    <ImageTarget name="lifee" size="0.080000 0.052157" />
+    <ImageTarget name="HiQ_logo_1040x449-1040x460" size="0.500000 0.221154" />
+    <ImageTarget name="pirate" size="0.500000 0.375000" />
+  </Tracking>
+</QCARConfig>
