@@ -314,6 +314,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1148963265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fb1bb37032f5fb40a0eab774ae1378c, type: 3}
+  m_Script: {fileID: 11500000, guid: 05bbab64f294d2b47aafbae80afa7e78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VisibleInMode: 2

@@ -13,7 +13,7 @@ public class MapLocationDialog : MonoBehaviour {
 	void Start () {
         ScriptEventSystem.Instance.OnLocationPressed += OnLocationPressed;
         gameObject.SetActive(false);
-        ARMode.onClick.AddListener(delegate () { ScriptEventSystem.Instance.SetARMode(true); ScriptEventSystem.Instance.SetMapMode(false); });
+        ARMode.onClick.AddListener(delegate () { ScriptEventSystem.Instance.SetMode(ScriptEventSystem.Mode.AR); });
         Close.onClick.AddListener(delegate () { gameObject.SetActive(false); });
 	}
 
