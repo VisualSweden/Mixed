@@ -3,11 +3,18 @@ using System.Collections;
 
 public class MapManager : MonoBehaviour {
     public OnlineMaps map;
+    public OnlineMapsLocationService location;
 
     public static MapManager Instance;
 
+    public double maxLat;
+    public double minLat;
+    public double maxLng;
+    public double minLng;
+
     void Awake() {
         Instance = this;
+  //      map.positionRange.type == OnlineMapsPositionRangeType.maxLat = maxLat;
     }
 
     public void AddMarker(Location Location) {
@@ -19,5 +26,9 @@ public class MapManager : MonoBehaviour {
         marker.OnClick += delegate (OnlineMapsMarkerBase obj) { ScriptEventSystem.Instance.SelectedMapMarker(Location); };
         marker.Init();
         map.AddMarker(marker);
+    }
+
+    public void CenterOnPlayer() {
+        location.UpdatePosition();
     }
 }
