@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ARCamera : MonoBehaviour {
+public class EnableOnARMode : MonoBehaviour {
 	void Start () {
         ScriptEventSystem.Instance.OnSetARMode += OnSetARMode;
         gameObject.SetActive(false);

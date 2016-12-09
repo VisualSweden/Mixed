@@ -6,6 +6,7 @@ public class ScriptEventSystem : MonoBehaviour {
     public delegate void booldDeletage(bool b);
 
     public event booldDeletage OnSetARMode;
+    public event booldDeletage OnSetMapMode;
 
     public static ScriptEventSystem Instance;
 
@@ -16,5 +17,10 @@ public class ScriptEventSystem : MonoBehaviour {
     public void SetARMode(bool arModeOn) {
         if (OnSetARMode != null)
             OnSetARMode(arModeOn);
+    }
+
+    public void SetMapMode(bool mapOn) {
+        if (OnSetMapMode != null)
+            OnSetMapMode(mapOn);
     }
 }

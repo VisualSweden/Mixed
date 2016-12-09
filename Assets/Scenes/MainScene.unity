@@ -246,8 +246,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Scenes:
   - GUI
-  - Tracking_BusinessCards
+  - Map
   - Tracking_HiQ
+  - Tracking_BusinessCards
 --- !u!4 &1118955939
 Transform:
   m_ObjectHideFlags: 0
