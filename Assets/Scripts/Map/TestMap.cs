@@ -10,6 +10,7 @@ public class TestMap : MonoBehaviour {
         map.markers[0].OnPress += delegate { test(); };
         map.markers[0].OnClick += delegate { test(); };
         map.markers[1].OnClick += delegate { test(); };
+        OnlineMapsMarker a = new OnlineMapsMarker();
 	}
 	
 

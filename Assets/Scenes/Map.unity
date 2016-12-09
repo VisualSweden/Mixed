@@ -99,6 +99,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 684384904}
   - 114: {fileID: 684384903}
+  - 114: {fileID: 684384905}
   m_Layer: 0
   m_Name: TestSystem
   m_TagString: Untagged
@@ -130,6 +131,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1276276419}
   m_RootOrder: 2
+--- !u!114 &684384905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684384902}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65eacb9dfac70e04ca115683c8349018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Location:
+    Title: Busniess Card
+    Description: Scrap Galaxy is a awesome game.
+    Image: {fileID: 0}
+    Thumbnail: {fileID: 2800000, guid: 94b15bb176762994a99cc3c50433807c, type: 3}
+    Longitude: 15.6214
+    Latitude: 58.4108
+    ID: ScrapGalaxy
 --- !u!1001 &796695362
 Prefab:
   m_ObjectHideFlags: 0
@@ -172,6 +192,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed414270d26395a438778b33aa74e342, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &929814008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 929814010}
+  - 114: {fileID: 929814009}
+  m_Layer: 0
+  m_Name: MapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &929814009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929814008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93386bc3207215d43b63c44e6bfe8353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 1850017568}
+--- !u!4 &929814010
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929814008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1496001, y: -2.937179, z: 0.82612526}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1 &1276276417
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +255,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1276276417}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75c8082b673cddc49b20d0ce2c63c322, type: 3}
   m_Name: 
@@ -214,7 +275,7 @@ Transform:
   - {fileID: 1850017569}
   - {fileID: 684384904}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1683119220
 GameObject:
   m_ObjectHideFlags: 0

@@ -250,8 +250,9 @@ GameObject:
   - 224: {fileID: 122680252}
   - 222: {fileID: 122680254}
   - 114: {fileID: 122680253}
+  - 114: {fileID: 122680255}
   m_Layer: 5
-  m_Name: Image
+  m_Name: LocationDialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,6 +313,22 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 122680251}
+--- !u!114 &122680255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 122680251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7bd48dc490e40d4aa375465688c81b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: {fileID: 1964631274}
+  Description: {fileID: 1496429876}
+  Image: {fileID: 377676478}
+  ARMode: {fileID: 757732168}
+  Close: {fileID: 741064001}
 --- !u!1 &130712106
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +340,7 @@ GameObject:
   - 222: {fileID: 130712109}
   - 114: {fileID: 130712108}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,7 +656,7 @@ GameObject:
   - 222: {fileID: 377676479}
   - 114: {fileID: 377676478}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1971,7 +1988,7 @@ GameObject:
   - 114: {fileID: 741064002}
   - 114: {fileID: 741064001}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2034,18 +2051,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 741064002}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 122680251}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &741064002
@@ -2081,6 +2087,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 741063999}
+--- !u!114 &757732168 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000012817367064, guid: ce3776fe8decb664f897cca2bc69c90d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1977073561}
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &806275596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3664,7 +3676,7 @@ GameObject:
   - 222: {fileID: 1496429877}
   - 114: {fileID: 1496429876}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4601,7 +4613,7 @@ GameObject:
   - 222: {fileID: 1964631275}
   - 114: {fileID: 1964631274}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4790,6 +4802,10 @@ Prefab:
         type: 2}
       propertyPath: m_Colors.m_NormalColor.b
       value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011194430214, guid: ce3776fe8decb664f897cca2bc69c90d, type: 2}
+      propertyPath: m_Name
+      value: StartCamera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce3776fe8decb664f897cca2bc69c90d, type: 2}
