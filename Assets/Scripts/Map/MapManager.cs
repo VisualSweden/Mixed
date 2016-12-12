@@ -7,14 +7,21 @@ public class MapManager : MonoBehaviour {
 
     public static MapManager Instance;
 
-    public double maxLat;
-    public double minLat;
-    public double maxLng;
-    public double minLng;
+    public bool trackPlayer;
+
+    public float maxLat;
+    public float minLat;
+    public float maxLng;
+    public float minLng;
+
+    public int maxZoom;
+    public int minZoom;
 
     void Awake() {
         Instance = this;
-  //      map.positionRange.type == OnlineMapsPositionRangeType.maxLat = maxLat;
+        location.OnLocationChanged += LocationChanged;
+        map.positionRange = new OnlineMapsPositionRange(minLat, minLng, maxLat, maxLng);
+        map.zoomRange = new OnlineMapsRange(minZoom, maxZoom);
     }
 
     public void AddMarker(Location Location) {
@@ -28,7 +35,14 @@ public class MapManager : MonoBehaviour {
         map.AddMarker(marker);
     }
 
-    public void CenterOnPlayer() {
-        location.UpdatePosition();
+    public void LocationChanged(Vector2 location) {
+        if (trackPlayer)
+            map.SetPosition(location.x, location.y);
+    }
+
+    public void CenterOnPlayer(bool b) {
+        trackPlayer = b;
+        if (b)
+            location.UpdatePosition();
     }
 }

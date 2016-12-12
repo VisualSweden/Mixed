@@ -5,13 +5,16 @@ using System.Collections;
 public class MapGUI : MonoBehaviour {
     private MapManager mapManager;
 
-    public Button myPosition;
-    public Button panorera;
+    public Toggle myPosition;
 
 	void Start () {
         mapManager = FindObjectOfType<MapManager>();
-        myPosition.onClick.AddListener(delegate {
-            mapManager.CenterOnPlayer();
+        myPosition.onValueChanged.AddListener(delegate (bool v) {
+            mapManager.CenterOnPlayer(v);
+            if (v) {
+                myPosition.isOn = true;
+            }
         });
-	}
+        //mapManager.map.OnChangePosition += delegate () { Debug.Log("PING"); };
+    }
 }
