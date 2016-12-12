@@ -135,11 +135,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToActivate.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_LocalPosition.x
@@ -179,23 +179,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.data[0]
-      value: AR_test_pirate
+      value: katscha
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToActivate.Array.data[0]
-      value: AR_test_pirate
+      value: test_database
       objectReference: {fileID: 0}
     - target: {fileID: 11400018, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mAutoInitTracker
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400018, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mAutoStartTracker
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400018, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mAutoInitBuilder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400018, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_Enabled
@@ -203,15 +203,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.data[1]
-      value: AR_Test
+      value: strykbraedan_logo
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToActivate.Array.data[1]
-      value: AR_Test
+      value: strykbraedan_logo
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mDataSetsToLoad.Array.data[2]
+      value: test_database
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mDataSetsToLoad.Array.data[3]
+      value: AR_test_pirate
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mDataSetsToLoad.Array.data[4]
+      value: AR_Test
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mDataSetsToActivate.Array.data[2]
+      value: katscha
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mDataSetsToActivate.Array.data[3]
+      value: AR_test_pirate
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: mDataSetsToActivate.Array.data[4]
+      value: AR_Test
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
@@ -247,8 +271,10 @@ MonoBehaviour:
   Scenes:
   - GUI
   - Map
-  - Tracking_HiQ
-  - Tracking_BusinessCards
+  - klasse_pratar
+  - katscha
+  - "bildspel_mot_v\xE4gg"
+  - jonas_pratar
 --- !u!4 &1118955939
 Transform:
   m_ObjectHideFlags: 0

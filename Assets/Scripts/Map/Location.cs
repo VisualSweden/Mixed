@@ -9,6 +9,4 @@ public class Location {
     public Texture2D Thumbnail;
     public double Longitude;
     public double Latitude;
-
-    public string ID; // Identifier
 }

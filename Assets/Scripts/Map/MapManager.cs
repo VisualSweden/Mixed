@@ -29,7 +29,6 @@ public class MapManager : MonoBehaviour {
         OnlineMapsMarker marker = new OnlineMapsMarker();
         marker.SetPosition(Location.Longitude, Location.Latitude);
         marker.texture = Location.Thumbnail;
-        marker.customData = Location.ID; // Points towards our game object, so we can enable it
         marker.OnClick += delegate (OnlineMapsMarkerBase obj) { ScriptEventSystem.Instance.SelectedMapMarker(Location); };
         marker.Init();
         map.AddMarker(marker);
