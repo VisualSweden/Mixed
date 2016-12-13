@@ -17,11 +17,19 @@ public class MapManager : MonoBehaviour {
     public int maxZoom;
     public int minZoom;
 
+    public bool HasPosition;
+
     void Awake() {
         Instance = this;
         location.OnLocationChanged += LocationChanged;
         map.positionRange = new OnlineMapsPositionRange(minLat, minLng, maxLat, maxLng);
         map.zoomRange = new OnlineMapsRange(minZoom, maxZoom);
+        location.OnLocationInited += FirstLocationRecieved;
+    }
+
+    public void FirstLocationRecieved() {
+        HasPosition = true;
+        location.OnLocationInited -= FirstLocationRecieved;
     }
 
     public void AddMarker(Location Location) {
@@ -43,5 +51,9 @@ public class MapManager : MonoBehaviour {
         trackPlayer = b;
         if (b)
             location.UpdatePosition();
+    }
+
+    public bool PlayerInRange() {
+        return location.position.x > minLng && location.position.x < maxLng; // && location.position.y > minLat && location.position.y < maxLat;
     }
 }

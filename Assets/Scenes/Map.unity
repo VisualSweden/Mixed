@@ -168,6 +168,7 @@ MonoBehaviour:
   minLng: 16.1
   maxZoom: 20
   minZoom: 13
+  HasPosition: 0
 --- !u!4 &929814010
 Transform:
   m_ObjectHideFlags: 0
@@ -338,7 +339,7 @@ MonoBehaviour:
   desiredAccuracy: 10
   emulatorCompass: 0
   emulatorPosition: {x: 0, y: 0}
-  findLocationByIP: 1
+  findLocationByIP: 0
   markerTooltip: 
   markerType: 0
   marker2DAlign: 4

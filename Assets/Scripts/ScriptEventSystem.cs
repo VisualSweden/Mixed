@@ -12,6 +12,8 @@ public class ScriptEventSystem : MonoBehaviour {
 
     public static ScriptEventSystem Instance;
 
+    public Mode CurrentMode;
+
     public enum Mode {
         Menu,
         Map,
@@ -25,6 +27,7 @@ public class ScriptEventSystem : MonoBehaviour {
     public void SetMode(Mode m) {
         if (OnSetMode != null)
             OnSetMode(m);
+        CurrentMode = m;
     }
 
     public void SelectedMapMarker(Location location) {
