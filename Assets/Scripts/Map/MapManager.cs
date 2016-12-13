@@ -9,6 +9,8 @@ public class MapManager : MonoBehaviour {
 
     public bool trackPlayer;
 
+    public bool LimitLocation;
+
     public float maxLat;
     public float minLat;
     public float maxLng;
@@ -22,8 +24,10 @@ public class MapManager : MonoBehaviour {
     void Awake() {
         Instance = this;
         location.OnLocationChanged += LocationChanged;
-        map.positionRange = new OnlineMapsPositionRange(minLat, minLng, maxLat, maxLng);
-        map.zoomRange = new OnlineMapsRange(minZoom, maxZoom);
+        if (LimitLocation) {
+            map.positionRange = new OnlineMapsPositionRange(minLat, minLng, maxLat, maxLng);
+            map.zoomRange = new OnlineMapsRange(minZoom, maxZoom);
+        }
         location.OnLocationInited += FirstLocationRecieved;
     }
 
@@ -54,6 +58,9 @@ public class MapManager : MonoBehaviour {
     }
 
     public bool PlayerInRange() {
-        return location.position.x > minLng && location.position.x < maxLng; // && location.position.y > minLat && location.position.y < maxLat;
+        if (LimitLocation)
+            return location.position.x > minLng && location.position.x < maxLng && location.position.y > minLat && location.position.y < maxLat;
+        return true;
     }
+
 }

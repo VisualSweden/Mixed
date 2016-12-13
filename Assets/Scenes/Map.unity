@@ -162,6 +162,7 @@ MonoBehaviour:
   map: {fileID: 1850017568}
   location: {fileID: 1850017566}
   trackPlayer: 1
+  LimitLocation: 1
   maxLat: 58.62
   minLat: 58.53
   maxLng: 16.25
