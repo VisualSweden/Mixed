@@ -5,7 +5,7 @@ using System.Collections;
 public class LoadMainScene : MonoBehaviour {
 	void Start () {
         Scene mainScene = SceneManager.GetSceneByName("MainScene");
-        if (mainScene == null || !mainScene.isLoaded)
+        if (!mainScene.isLoaded)
             SceneManager.LoadScene("MainScene");
 	}
 }
