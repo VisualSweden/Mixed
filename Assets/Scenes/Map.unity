@@ -338,8 +338,8 @@ MonoBehaviour:
   compassThreshold: 8
   createMarkerInUserPosition: 1
   desiredAccuracy: 10
-  emulatorCompass: 0
-  emulatorPosition: {x: 0, y: 0}
+  emulatorCompass: 123
+  emulatorPosition: {x: 16.18041, y: 58.58957}
   findLocationByIP: 0
   markerTooltip: 
   markerType: 0
@@ -353,7 +353,7 @@ MonoBehaviour:
   updateDistance: 10
   updatePosition: 1
   useCompassForMarker: 0
-  useGPSEmulator: 0
+  useGPSEmulator: 1
 --- !u!114 &1850017567
 MonoBehaviour:
   m_ObjectHideFlags: 0

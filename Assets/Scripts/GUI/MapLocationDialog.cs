@@ -19,7 +19,7 @@ public class MapLocationDialog : MonoBehaviour {
 	void Start () {
         ScriptEventSystem.Instance.OnLocationPressed += OnLocationPressed;
         gameObject.SetActive(false);
-        ARMode.onClick.AddListener(delegate () { ScriptEventSystem.Instance.SetMode(ScriptEventSystem.Mode.AR); });
+        ARMode.onClick.AddListener(delegate () { ScriptEventSystem.Instance.SetMode(ScriptEventSystem.Mode.AR); ScriptEventSystem.Instance.GoToLocation(selectedLocation); });
         Close.onClick.AddListener(delegate () { ShowDialog(false); });
         ScriptEventSystem.Instance.OnSetMode += OnSetMode;
         MapManager.Instance.location.OnLocationChanged += delegate (Vector2 v) { UpdateARButton(); };
