@@ -4,6 +4,8 @@ using System.Collections;
 public class GPSPositionedItem : MonoBehaviour {
     private Location myLocation;
 
+    public float CameraDistance;
+
     public float speed;
 
 	void Start () {
@@ -34,9 +36,10 @@ public class GPSPositionedItem : MonoBehaviour {
     }
 
     void Update() {
-        Vector3 d = Vector3.ProjectOnPlane(Input.compass.rawVector, Input.gyro.gravity).normalized * 5;
+        Vector3 d = Vector3.ProjectOnPlane(Input.compass.rawVector, Input.gyro.gravity).normalized;
         d.z = -d.z;
-        transform.position = Vector3.Slerp(transform.position, d, Time.deltaTime * speed);
+        //d = Quaternion.Euler(0, CompassDirection, 0) * d;
+        transform.position = Vector3.Slerp(transform.position, d * CameraDistance, Time.deltaTime * speed);
     }
 
     /*

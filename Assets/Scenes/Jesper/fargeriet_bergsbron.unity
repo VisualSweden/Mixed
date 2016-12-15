@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ac619f0f1b7554ca8638168a9cc77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CompassDirection: 180
+  CameraDistance: 5
   speed: 0.5
 --- !u!1 &113198651
 GameObject:
