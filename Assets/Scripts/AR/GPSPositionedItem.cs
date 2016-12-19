@@ -5,6 +5,7 @@ public class GPSPositionedItem : MonoBehaviour {
     private Location myLocation;
 
     public float CameraDistance;
+    public float CompassDirection;
 
     public float speed;
 
@@ -38,7 +39,6 @@ public class GPSPositionedItem : MonoBehaviour {
     void Update() {
         Vector3 d = Vector3.ProjectOnPlane(Input.compass.rawVector, Input.gyro.gravity).normalized;
         d.z = -d.z;
-        //d = Quaternion.Euler(0, CompassDirection, 0) * d;
         transform.position = Vector3.Slerp(transform.position, d * CameraDistance, Time.deltaTime * speed);
     }
 
