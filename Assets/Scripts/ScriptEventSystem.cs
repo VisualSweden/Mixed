@@ -4,12 +4,16 @@ using System;
 
 public class ScriptEventSystem : MonoBehaviour {
     public delegate void locatiodDeletage(Location l);
-
+	public delegate void boolDelegate(bool b);
     public delegate void modeDelegate(Mode m);
+	public delegate void voidDelegate ();
 
     public event locatiodDeletage OnLocationPressed;
     public event locatiodDeletage OnGoToLocation;
     public event modeDelegate OnSetMode;
+	public event boolDelegate OnSetSoundOn;
+	public event voidDelegate OnSoundObjectVisible;
+	public event voidDelegate OnSoundObjectHidden;
 
     public static ScriptEventSystem Instance;
 
@@ -40,4 +44,19 @@ public class ScriptEventSystem : MonoBehaviour {
         if (OnLocationPressed != null)
             OnLocationPressed(location);
     }
+
+	public void SetSoundOn(bool b) {
+		if (OnSetSoundOn != null)
+			OnSetSoundOn(b);
+	}
+
+	public void SoundObjectVisible() {
+		if (OnSoundObjectVisible != null)
+			OnSoundObjectVisible();
+	}
+
+	public void SoundObjectHidden() {
+		if (OnSoundObjectHidden != null)
+			OnSoundObjectHidden();
+	}
 }
