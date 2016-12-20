@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Niklas/klasse_pratar.unity
   - enabled: 1
     path: "Assets/Scenes/Niklas/bildspel_mot_v\xE4gg.unity"
+  - enabled: 1
+    path: Assets/Scenes/Gamification.unity

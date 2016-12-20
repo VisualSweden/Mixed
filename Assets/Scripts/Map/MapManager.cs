@@ -62,5 +62,4 @@ public class MapManager : MonoBehaviour {
             return location.position.x > minLng && location.position.x < maxLng && location.position.y > minLat && location.position.y < maxLat;
         return true;
     }
-
 }
