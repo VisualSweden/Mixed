@@ -43,15 +43,9 @@ public class MapLocationDialog : MonoBehaviour {
             Vector2 player = MapManager.Instance.location.position;
             Vector2 location = new Vector2((float)selectedLocation.Longitude, (float)selectedLocation.Latitude);
             float distance = OnlineMapsUtils.DistanceBetweenPoints(player, location).magnitude * 1000;
-            //FarAwayText.text = distance + "m";
-            //if (distance < selectedLocation.TriggerDistance) {
-			if (true) {
-                FarAwayText.gameObject.SetActive(false);
-                ARMode.gameObject.SetActive(true);
-            } else {
-                FarAwayText.gameObject.SetActive(true);
-                ARMode.gameObject.SetActive(false);
-            }
+            
+            FarAwayText.gameObject.SetActive(false);
+            ARMode.gameObject.SetActive(true);
         }
     }
 

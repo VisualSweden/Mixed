@@ -305,6 +305,7 @@ MonoBehaviour:
   - "bildspel_mot_v\xE4gg"
   - jonas_pratar
   - gps_positioned_items
+  - Gamification
 --- !u!4 &1118955939
 Transform:
   m_ObjectHideFlags: 0
