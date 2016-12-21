@@ -23,5 +23,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Jesper/Gamification.unity
   - enabled: 1
     path: Assets/Scenes/Jesper/gps_positioned_items.unity
-    enabled: 1
+  - enabled: 1
     path: Assets/Scenes/Niklas/kitten_blanket.unity
