@@ -2739,6 +2739,11 @@ Prefab:
       propertyPath: m_Colors.m_DisabledColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010925701080, guid: 7b1e8c5dc05c758489d3bbac10799f44,
+        type: 2}
+      propertyPath: m_Text
+      value: "\uF041"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b1e8c5dc05c758489d3bbac10799f44, type: 2}
   m_IsPrefabParent: 0
