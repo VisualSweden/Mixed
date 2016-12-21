@@ -8,6 +8,7 @@ public class ScriptEventSystem : MonoBehaviour {
     public delegate void modeDelegate(Mode m);
 
     public event locatiodDeletage OnLocationPressed;
+    public event locatiodDeletage OnGoToLocation;
     public event modeDelegate OnSetMode;
 
     public static ScriptEventSystem Instance;
@@ -28,6 +29,11 @@ public class ScriptEventSystem : MonoBehaviour {
         if (OnSetMode != null)
             OnSetMode(m);
         CurrentMode = m;
+    }
+
+    public void GoToLocation(Location l) {
+        if (OnGoToLocation != null)
+            OnGoToLocation(l);
     }
 
     public void SelectedMapMarker(Location location) {

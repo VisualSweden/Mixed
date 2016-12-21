@@ -11,7 +11,9 @@ public class LoadScenes : MonoBehaviour {
         if (!doOnce) {
             doOnce = true;
             foreach (var scene in Scenes) {
-                SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+                if (!SceneManager.GetSceneByName(scene).isLoaded) {
+                    SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+                }
             }
         }
     }
