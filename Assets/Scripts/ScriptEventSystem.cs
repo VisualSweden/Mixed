@@ -14,6 +14,8 @@ public class ScriptEventSystem : MonoBehaviour {
 	public event boolDelegate OnSetSoundOn;
 	public event voidDelegate OnSoundObjectVisible;
 	public event voidDelegate OnSoundObjectHidden;
+    public event voidDelegate OnVideoFinished;
+    public event voidDelegate OnVideoRestart;
 
     public static ScriptEventSystem Instance;
 
@@ -59,4 +61,14 @@ public class ScriptEventSystem : MonoBehaviour {
 		if (OnSoundObjectHidden != null)
 			OnSoundObjectHidden();
 	}
+
+    public void VideoFinished() {
+        if (OnVideoFinished != null)
+            OnVideoFinished();
+    }
+
+    public void VideoRestart() {
+        if (OnVideoRestart != null)
+            OnVideoRestart();
+    }
 }
