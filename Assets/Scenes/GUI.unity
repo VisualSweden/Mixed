@@ -523,8 +523,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180, y: -340.00003}
-  m_SizeDelta: {x: 360, y: 97.14286}
+  m_AnchoredPosition: {x: 180, y: -366}
+  m_SizeDelta: {x: 360, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &205495724
 GameObject:
@@ -1076,7 +1076,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 88, y: -22}
-  m_SizeDelta: {x: 127.2, y: 30}
+  m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &396178364
 MonoBehaviour:
@@ -1110,7 +1110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "S\xE5h\xE4r funkar det!"
+  m_Text: "Leta upp en intresseplats \n"
 --- !u!222 &396178365
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1184,8 +1184,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "En v\xE4lkomnande text som f\xF6rklarar hur appen funkar och vad anv\xE4ndaren
-    kan t\xE4nkas f\xF6rv\xE4nta sig. "
+  m_Text: "Anv\xE4nd h\xF6rlurar f\xF6r b\xE4sta ljudupplevelse."
 --- !u!222 &404098154
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1479,6 +1478,10 @@ Prefab:
       propertyPath: m_Name
       value: Intro
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013892399686, guid: a32e8ac2cb52753498052346f571ae63, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a32e8ac2cb52753498052346f571ae63, type: 2}
   m_IsPrefabParent: 0
@@ -1549,8 +1552,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "En v\xE4lkomnande text som f\xF6rklarar hur appen funkar och vad anv\xE4ndaren
-    kan t\xE4nkas f\xF6rv\xE4nta sig. "
+  m_Text: "Starta appen och leta upp en intresseplats i kartan. Intresseplatser \xE4r
+    utm\xE4rkta som tv\xE5 olika typer av r\xF6da cirklar, dels en streckad cirkel
+    och en helr\xF6d cirkel med en symbol i."
 --- !u!222 &518744524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1664,8 +1668,8 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180, y: -534.2857}
-  m_SizeDelta: {x: 360, y: 97.14286}
+  m_AnchoredPosition: {x: 180, y: -684}
+  m_SizeDelta: {x: 360, y: 161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &584638557
 Prefab:
@@ -1722,7 +1726,7 @@ Prefab:
     - target: {fileID: 224000013517227658, guid: a32e8ac2cb52753498052346f571ae63,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 299.99997
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 224000013517227658, guid: a32e8ac2cb52753498052346f571ae63,
         type: 2}
@@ -1732,7 +1736,7 @@ Prefab:
     - target: {fileID: 224000013517227658, guid: a32e8ac2cb52753498052346f571ae63,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 119.99999
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 224000013517227658, guid: a32e8ac2cb52753498052346f571ae63,
         type: 2}
@@ -1983,42 +1987,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224000013517227658, guid: a32e8ac2cb52753498052346f571ae63,
     type: 2}
   m_PrefabInternal: {fileID: 1403582069}
---- !u!1 &650043070
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 650043071}
-  m_Layer: 5
-  m_Name: GameObject (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &650043071
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 650043070}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 2010831123}
-  - {fileID: 1586030576}
-  - {fileID: 1367860045}
-  m_Father: {fileID: 1184400126}
-  m_RootOrder: 6
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180, y: -631.4286}
-  m_SizeDelta: {x: 360, y: 97.14286}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &667790729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,7 +2202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1138637030}
   m_Horizontal: 0
-  m_Vertical: 0
+  m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -2513,6 +2481,16 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224000011078662902, guid: cf0b6a65dc11c3540b28e6320d9e267c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -55
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012996300998, guid: cf0b6a65dc11c3540b28e6320d9e267c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf0b6a65dc11c3540b28e6320d9e267c, type: 2}
   m_IsPrefabParent: 0
@@ -2730,8 +2708,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "En v\xE4lkomnande text som f\xF6rklarar hur appen funkar och vad anv\xE4ndaren
-    kan t\xE4nkas f\xF6rv\xE4nta sig. "
+  m_Text: "Klicka p\xE5 en intresseplats i kartan d\xE5 du befinner dig i n\xE4rheten
+    av den. En informationsruta dyker upp som beskriver var du ska st\xE5 och vart
+    du ska rikta kameran. G\xE5 till den plats som beskrivs och klicka p\xE5 knappen
+    STARTA KAMERA."
 --- !u!222 &1023844138
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2997,6 +2977,11 @@ Prefab:
       propertyPath: m_Colors.m_DisabledColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010925701080, guid: 7b1e8c5dc05c758489d3bbac10799f44,
+        type: 2}
+      propertyPath: m_Text
+      value: "\uF041"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b1e8c5dc05c758489d3bbac10799f44, type: 2}
   m_IsPrefabParent: 0
@@ -3038,8 +3023,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180, y: -437.14288}
-  m_SizeDelta: {x: 360, y: 97.14286}
+  m_AnchoredPosition: {x: 180, y: -516}
+  m_SizeDelta: {x: 360, y: 174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1138637029
 GameObject:
@@ -3085,7 +3070,6 @@ GameObject:
   - 224: {fileID: 1184400126}
   - 222: {fileID: 1184400129}
   - 114: {fileID: 1184400128}
-  - 114: {fileID: 1184400127}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -3110,34 +3094,13 @@ RectTransform:
   - {fileID: 177912524}
   - {fileID: 1128986107}
   - {fileID: 550231859}
-  - {fileID: 650043071}
   m_Father: {fileID: 1445802618}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -57}
+  m_SizeDelta: {x: 0, y: 114}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1184400127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1184400125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1297475563, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
 --- !u!114 &1184400128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3318,7 +3281,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 88, y: -22}
-  m_SizeDelta: {x: 127.2, y: 30}
+  m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1208358765
 MonoBehaviour:
@@ -3352,7 +3315,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "S\xE5h\xE4r funkar det!"
+  m_Text: "Klicka p\xE5 en intresseplats i kartan\n"
 --- !u!222 &1208358766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3538,7 +3501,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 24, y: -22}
+  m_AnchoredPosition: {x: 20, y: -22}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1313590732
@@ -3751,81 +3714,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "S\xE5h\xE4r funkar det!"
+  m_Text: Rikta kameran
 --- !u!222 &1365501410
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1365501407}
---- !u!1 &1367860044
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1367860045}
-  - 222: {fileID: 1367860047}
-  - 114: {fileID: 1367860046}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1367860045
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1367860044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 650043071}
-  m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 24, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
-  m_Pivot: {x: 0, y: 0.5}
---- !u!114 &1367860046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1367860044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.6764706, g: 0.6764706, b: 0.6764706, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1367860047
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1367860044}
 --- !u!1 &1369621125 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010955445672, guid: 91cda0e779b79e34e950e2f0fb8f65ef,
@@ -3966,7 +3861,7 @@ Prefab:
     - target: {fileID: 224000013517227658, guid: a32e8ac2cb52753498052346f571ae63,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 179.99998
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 224000013517227658, guid: a32e8ac2cb52753498052346f571ae63,
         type: 2}
@@ -3976,7 +3871,7 @@ Prefab:
     - target: {fileID: 224000013517227658, guid: a32e8ac2cb52753498052346f571ae63,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 119.99999
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 224000013517227658, guid: a32e8ac2cb52753498052346f571ae63,
         type: 2}
@@ -4181,6 +4076,16 @@ Prefab:
       propertyPath: m_Name
       value: Top
       objectReference: {fileID: 0}
+    - target: {fileID: 224000011078662902, guid: cf0b6a65dc11c3540b28e6320d9e267c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -55
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012996300998, guid: cf0b6a65dc11c3540b28e6320d9e267c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf0b6a65dc11c3540b28e6320d9e267c, type: 2}
   m_IsPrefabParent: 0
@@ -4375,7 +4280,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 680}
+  m_SizeDelta: {x: 0, y: 796}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1469204940
 GameObject:
@@ -4409,8 +4314,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 15, y: -303.4}
-  m_SizeDelta: {x: -30, y: 214.3}
+  m_AnchoredPosition: {x: 20, y: -303.4}
+  m_SizeDelta: {x: -35, y: 214.3}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1469204942
 MonoBehaviour:
@@ -4432,7 +4337,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5f89f1a2c9fe32546bc0a03adde139c7, type: 3}
+    m_Font: {fileID: 12800000, guid: 69665fd78f68f1f4d97c1affa3185239, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -4444,8 +4349,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "En text och video som bygger st\xE4mning. \xC4r du redo att bla bla bla
-    bla? Jag har ingen aning om video \xE4r m\xF6jligt dock..."
+  m_Text: "Mixed NKPG har n\xE5got att ber\xE4tta p\xE5 platser d\xE4r du befinner
+    dig! Mixed NKPG visar video, spelar upp ljud och visar 3D-objekt p\xE5 speciellt
+    utvalda platser."
 --- !u!222 &1469204943
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4584,7 +4490,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4596,7 +4502,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1535290579}
   m_OnClick:
     m_PersistentCalls:
@@ -4703,87 +4609,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "S\xE5h\xE4r funkar det!"
+  m_Text: "Anv\xE4nd h\xF6rlurar"
 --- !u!222 &1568052004
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1568052001}
---- !u!1 &1586030575
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1586030576}
-  - 222: {fileID: 1586030578}
-  - 114: {fileID: 1586030577}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1586030576
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1586030575}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 650043071}
-  m_RootOrder: 1
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 88, y: -22}
-  m_SizeDelta: {x: 127.2, y: 30}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &1586030577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1586030575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 69665fd78f68f1f4d97c1affa3185239, type: 3}
-    m_FontSize: 16
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "S\xE5h\xE4r funkar det!"
---- !u!222 &1586030578
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1586030575}
 --- !u!224 &1591453395 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224000014266398158, guid: 91cda0e779b79e34e950e2f0fb8f65ef,
@@ -5025,8 +4857,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 24, y: -48.2}
-  m_SizeDelta: {x: -48, y: -48.2}
+  m_AnchoredPosition: {x: 20, y: -55}
+  m_SizeDelta: {x: -44, y: -55}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1721144658
 MonoBehaviour:
@@ -5060,8 +4892,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "En v\xE4lkomnande text som f\xF6rklarar hur appen funkar och vad anv\xE4ndaren
-    kan t\xE4nkas f\xF6rv\xE4nta sig. "
+  m_Text: "Se videon eller l\xE4s v\xE5r steg-f\xF6r-steg-beskrivning nedan om hur
+    du anv\xE4nder appen."
 --- !u!222 &1721144659
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5344,7 +5176,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 30, y: -22}
+  m_AnchoredPosition: {x: 20, y: -22}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1856146769
@@ -5379,7 +5211,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: En rubrik
+  m_Text: 
 --- !u!222 &1856146770
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5521,8 +5353,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "En v\xE4lkomnande text som f\xF6rklarar hur appen funkar och vad anv\xE4ndaren
-    kan t\xE4nkas f\xF6rv\xE4nta sig. "
+  m_Text: "Om intresseplatsen p\xE5 kartan var en r\xF6d cirkel med en ikon i ska
+    du rikta kameran mot en bild eller ett m\xE4rke. Om intresseplatsen var en streckad
+    cirkel ska du bara rikta kameran i den riktning som beskrevs informationsrutan."
 --- !u!222 &1884333227
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5871,78 +5704,3 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce3776fe8decb664f897cca2bc69c90d, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2010831122
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 2010831123}
-  - 222: {fileID: 2010831125}
-  - 114: {fileID: 2010831124}
-  m_Layer: 5
-  m_Name: Text (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2010831123
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2010831122}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 650043071}
-  m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 88, y: -48.2}
-  m_SizeDelta: {x: -112, y: -48.2}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &2010831124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2010831122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 69665fd78f68f1f4d97c1affa3185239, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "En v\xE4lkomnande text som f\xF6rklarar hur appen funkar och vad anv\xE4ndaren
-    kan t\xE4nkas f\xF6rv\xE4nta sig. "
---- !u!222 &2010831125
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2010831122}

@@ -344,7 +344,7 @@ MonoBehaviour:
   markerTooltip: 
   markerType: 0
   marker2DAlign: 4
-  marker2DTexture: {fileID: 2800000, guid: c0a5257e2ab748f469572ee1c53c1c2c, type: 3}
+  marker2DTexture: {fileID: 2800000, guid: 54d3d634f40e5494dab435c7ec9295e4, type: 3}
   marker3DPrefab: {fileID: 0}
   maxPositionCount: 3
   position: {x: 0, y: 0}
