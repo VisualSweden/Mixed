@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 1850017568}
   location: {fileID: 1850017566}
-  trackPlayer: 1
+  trackPlayer: 0
   LimitLocation: 1
   maxLat: 58.62
   minLat: 58.53
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cad15691a9de6478a78e8f68ae6ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoStopUpdateOnInput: 1
+  autoStopUpdateOnInput: 0
   compassThreshold: 8
   createMarkerInUserPosition: 1
   desiredAccuracy: 1
@@ -348,10 +348,10 @@ MonoBehaviour:
   marker3DPrefab: {fileID: 0}
   maxPositionCount: 3
   position: {x: 0, y: 0}
-  restoreAfter: 10
+  restoreAfter: 0
   trueHeading: 0
   updateDistance: 10
-  updatePosition: 1
+  updatePosition: 0
   useCompassForMarker: 0
   useGPSEmulator: 1
 --- !u!114 &1850017567

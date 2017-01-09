@@ -21,14 +21,30 @@ public class MapManager : MonoBehaviour {
 
     public bool HasPosition;
 
+    private Vector2 oldMapLocation;
+
     void Awake() {
         Instance = this;
-        location.OnLocationChanged += LocationChanged;
         if (LimitLocation) {
             map.positionRange = new OnlineMapsPositionRange(minLat, minLng, maxLat, maxLng);
             map.zoomRange = new OnlineMapsRange(minZoom, maxZoom);
         }
         location.OnLocationInited += FirstLocationRecieved;
+    }
+
+    private void Update() {
+        if (trackPlayer) {
+            if ((map.position - oldMapLocation).magnitude > 0.001f) {
+                PlayerMovedMap();
+            } else {
+                map.SetPosition(location.position.x, location.position.y);
+                oldMapLocation = map.position;
+            }
+        }
+    }
+
+    public void PlayerMovedMap() {
+        ScriptEventSystem.Instance.PlayerMovesMap();
     }
 
     public void FirstLocationRecieved() {
@@ -46,15 +62,12 @@ public class MapManager : MonoBehaviour {
         map.AddMarker(marker);
     }
 
-    public void LocationChanged(Vector2 location) {
-        if (trackPlayer)
-            map.SetPosition(location.x, location.y);
-    }
-
     public void CenterOnPlayer(bool b) {
         trackPlayer = b;
-        if (b)
-            location.UpdatePosition();
+        if (b) {
+            map.SetPosition(location.position.x, location.position.y);
+            oldMapLocation = map.position;
+        }
     }
 
     public bool PlayerInRange() {

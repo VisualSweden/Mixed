@@ -11,10 +11,10 @@ public class MapGUI : MonoBehaviour {
         mapManager = FindObjectOfType<MapManager>();
         myPosition.onValueChanged.AddListener(delegate (bool v) {
             mapManager.CenterOnPlayer(v);
-            if (v) {
-                myPosition.isOn = true;
-            }
         });
-        //mapManager.map.OnChangePosition += delegate () { Debug.Log("PING"); };
+
+        ScriptEventSystem.Instance.OnPlayerMovesMap += delegate {
+            myPosition.isOn = false;
+        };
     }
 }

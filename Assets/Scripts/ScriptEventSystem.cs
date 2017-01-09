@@ -16,6 +16,7 @@ public class ScriptEventSystem : MonoBehaviour {
 	public event voidDelegate OnSoundObjectHidden;
     public event voidDelegate OnVideoFinished;
     public event voidDelegate OnVideoRestart;
+    public event voidDelegate OnPlayerMovesMap;
 
     public static ScriptEventSystem Instance;
 
@@ -35,6 +36,11 @@ public class ScriptEventSystem : MonoBehaviour {
         if (OnSetMode != null)
             OnSetMode(m);
         CurrentMode = m;
+    }
+
+    public void PlayerMovesMap() {
+        if (OnPlayerMovesMap != null)
+            OnPlayerMovesMap();
     }
 
     public void GoToLocation(Location l) {
