@@ -9,13 +9,14 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
 
     public float resetTime;
 
+    private bool ignoreEnd = false;
+
     void Awake() {
         mediaPlayer = GetComponentInChildren<MediaPlayerCtrl>();
         mediaPlayer.OnEnd += delegate () {
-            if(mediaPlayer.GetSeekPosition() > 0)
+            if(mediaPlayer.GetSeekPosition() > 0 && !ignoreEnd)
                 ScriptEventSystem.Instance.VideoFinished();
         };
-        mediaPlayer.SetSpeed(10);
 
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour) {
@@ -59,18 +60,23 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
     }
 
     private void RestartVideo() {
-        mediaPlayer.gameObject.SetActive(false);
-        Invoke("PlayVideo", 1);
+        if (mediaPlayer.gameObject.activeInHierarchy) {
+        ignoreEnd = true;
+        //mediaPlayer.gameObject.SetActive(false);
+            //mediaPlayer.SeekTo(0);
+            mediaPlayer.Play();
+            Invoke("PlayVideo", 0.01f);
+        }
     }
 
     private void PlayVideo() {
-        mediaPlayer.SeekTo(0);
-        mediaPlayer.Play();
-        Invoke("En", 1);
+            mediaPlayer.Play();
+            Invoke("En", 1);
     }
 
     private void En() {
-        mediaPlayer.gameObject.SetActive(true);
+        //mediaPlayer.gameObject.SetActive(true);
+        ignoreEnd = false;
 
     }
 }
