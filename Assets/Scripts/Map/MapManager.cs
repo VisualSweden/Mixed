@@ -19,6 +19,8 @@ public class MapManager : MonoBehaviour {
     public int maxZoom;
     public int minZoom;
 
+    public float mapSnapBackDistance;
+
     public bool HasPosition;
 
     private Vector2 oldMapLocation;
@@ -34,7 +36,7 @@ public class MapManager : MonoBehaviour {
 
     private void Update() {
         if (trackPlayer) {
-            if ((map.position - oldMapLocation).magnitude > 0.001f) {
+            if ((map.position - oldMapLocation).magnitude > mapSnapBackDistance) {
                 PlayerMovedMap();
             } else {
                 map.SetPosition(location.position.x, location.position.y);
