@@ -137,8 +137,8 @@ MonoBehaviour:
     Description: En massa text om ett gammalt foto
     Image: {fileID: 21300000, guid: 26d63f02880c16947bed84f4ecdbe59c, type: 3}
     Thumbnail: {fileID: 2800000, guid: 8412b906b172e884a86471c8d539303b, type: 3}
-    Longitude: 16.178301575299656
-    Latitude: 58.589715966402984
+    Longitude: 16.17821
+    Latitude: 58.58949
     TriggerDistance: 1000
 --- !u!114 &78329588
 MonoBehaviour:
