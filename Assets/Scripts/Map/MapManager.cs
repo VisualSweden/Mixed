@@ -69,6 +69,7 @@ public class MapManager : MonoBehaviour {
         if (b) {
             map.SetPosition(location.position.x, location.position.y);
             oldMapLocation = map.position;
+            map.zoom = 19;
         }
     }
 
