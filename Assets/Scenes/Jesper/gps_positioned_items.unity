@@ -133,9 +133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Location:
-    Title: "F\xE4rgeriet Bergsbron"
-    Description: En massa text om ett gammalt foto
-    Image: {fileID: 21300000, guid: 26d63f02880c16947bed84f4ecdbe59c, type: 3}
+    Title: "Abrahams f\xE4rgeri"
+    Description: "St\xE4lld dig p\xE5 Bergsbron med \xF6n p\xE5 din h\xF6ger sida."
+    Image: {fileID: 21300000, guid: 3a0c9b14d28168d4cb9192b09698cb13, type: 3}
     Thumbnail: {fileID: 2800000, guid: 8412b906b172e884a86471c8d539303b, type: 3}
     Longitude: 16.17821
     Latitude: 58.58949
@@ -989,9 +989,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Location:
-    Title: Katscha
-    Description: En massa text om ett nytt foto
-    Image: {fileID: 21300000, guid: 26d63f02880c16947bed84f4ecdbe59c, type: 3}
+    Title: Bostadshuset Katscha
+    Description: "St\xE5 p\xE5 mitten av Laxholmsbron rikta kameran mot bostadshuset
+      Katscha. "
+    Image: {fileID: 21300000, guid: 44715d0f34796724aad50b06fedcf9cd, type: 3}
     Thumbnail: {fileID: 2800000, guid: 8412b906b172e884a86471c8d539303b, type: 3}
     Longitude: 16.17996454488889
     Latitude: 58.58881572806519
