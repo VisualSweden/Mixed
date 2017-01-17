@@ -300,10 +300,10 @@ MonoBehaviour:
   Scenes:
   - GUI
   - Map
-  - "Gr\xE4nden"
-  - "Kompis p\xE5 kontoret"
+  - Granden
+  - KompisPaKontoret
   - gps_positioned_items
-  - "Norrk\xF6ping Science Park"
+  - NorrkopingSciencePark
 --- !u!4 &1118955939
 Transform:
   m_ObjectHideFlags: 0
