@@ -40,6 +40,6 @@ public class Bubble : MonoBehaviour {
 	
 	void Update () {
         transform.localPosition += (BaseVelocity + Mathf.Sin(Frequency) * Amplitude) * Time.deltaTime;
-        transform.rotation = Quaternion.LookRotation(transform.position - myCamera.transform.position, myCamera.transform.up);
+        transform.rotation = Quaternion.LookRotation(transform.position - myCamera.transform.position, transform.parent.up);
 	}
 }
