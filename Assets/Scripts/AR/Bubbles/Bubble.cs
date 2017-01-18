@@ -13,8 +13,11 @@ public class Bubble : MonoBehaviour {
 
     public event bubbleDelegate OnBubbleDestroyed;
 
+    private Camera myCamera;
+
     private void Awake() {
         animator = GetComponent<Animator>();
+        myCamera = FindObjectOfType<Vuforia.VuforiaBehaviour>().GetComponentInChildren<Camera>();
     }
 
     void OnEnable () {
@@ -27,7 +30,8 @@ public class Bubble : MonoBehaviour {
 
     public void ExplodeAnimationFinished() {
         gameObject.SetActive(false);
-        OnBubbleDestroyed(this);
+        if (OnBubbleDestroyed != null)
+            OnBubbleDestroyed(this);
     }
 
     void OnMouseUpAsButton() {
@@ -36,5 +40,6 @@ public class Bubble : MonoBehaviour {
 	
 	void Update () {
         transform.localPosition += (BaseVelocity + Mathf.Sin(Frequency) * Amplitude) * Time.deltaTime;
+        transform.rotation = Quaternion.LookRotation(transform.position - myCamera.transform.position, myCamera.transform.up);
 	}
 }
