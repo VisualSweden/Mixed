@@ -476,10 +476,10 @@ MonoBehaviour:
   useWebplayerProxy: 1
   webplayerProxyURL: http://service.infinity-code.com/redirect.php?
   width: 0
-  latitude: 58.4108
-  longitude: 15.6214
+  latitude: 58.587745
+  longitude: 16.192420999999968
   _position: {x: 0, y: 0}
-  _zoom: 15
+  _zoom: 13
 --- !u!4 &1850017569
 Transform:
   m_ObjectHideFlags: 0
