@@ -13,7 +13,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GUI.unity
   - enabled: 0
     path: Assets/Scenes/Niklas/jonas_pratar.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Niklas/katscha.unity
   - enabled: 0
     path: "Assets/Scenes/Niklas/Gr\xE4nden.unity"
