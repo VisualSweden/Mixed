@@ -9,11 +9,15 @@ public class ArticleDialog : MonoBehaviour {
     public Button ReadMore;
     public Button Close;
 
+    public Image articleImage;
+
     public GameObject MapControls;
 
     private Newsarticle Article;
+    private Texture2D thumbnailTexture;
 
 	void Start () {
+        thumbnailTexture = new Texture2D(4, 4, TextureFormat.DXT1, false);
         ScriptEventSystem.Instance.OnArticlePressed += OnArticlePressed;
         gameObject.SetActive(false);
         ReadMore.onClick.AddListener(delegate () { Application.OpenURL(Article.Link); });
@@ -30,6 +34,27 @@ public class ArticleDialog : MonoBehaviour {
         Title.text = Article.Title;
         Description.text = Article.Description;
         ShowDialog(true);
+        articleImage.enabled = false;
+        if (article.ImageUrl!="")
+            StartCoroutine(FetchImage());
+    }
+
+
+    private IEnumerator FetchImage() {
+        WWW www = new WWW(Article.ImageUrl);
+        yield return www;
+        thumbnailTexture = new Texture2D(www.texture.width, www.texture.height, TextureFormat.DXT1, false);
+        www.LoadImageIntoTexture(thumbnailTexture);
+
+        Rect rec = new Rect(0, 0, thumbnailTexture.width, thumbnailTexture.height);
+        Sprite spriteToUse = Sprite.Create(thumbnailTexture, rec, new Vector2(0.5f, 0.5f), 100);
+        articleImage.sprite = spriteToUse;
+
+        www.Dispose();
+        www = null;
+
+        //        articleImage.sprite = thumbnailTexture;
+        articleImage.enabled = true;
     }
 
     private void ShowDialog(bool show) {
