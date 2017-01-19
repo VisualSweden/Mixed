@@ -29,6 +29,14 @@ public class rsstest : MonoBehaviour {
         return Regex.Replace(s, "&lt;.*?&gt;", "");
     }
 
+    private string FindImageUrl(string s) {
+        Match match = Regex.Match(s, "src=\".*?\"");
+        if (match.Success) {
+            return match.Value.Substring(5, match.Value.Length-7);
+        }
+        return "";
+    }
+
     private List<Newsarticle> Parse(string s) {
         List<Newsarticle> articles = new List<Newsarticle>();
         var reader = new TinyXmlReader(s);
@@ -60,6 +68,7 @@ public class rsstest : MonoBehaviour {
                             currentArticle.Latitude = double.Parse(reader.content);
                             break;
                         case "description":
+                            currentArticle.ImageUrl = FindImageUrl(reader.content);
                             currentArticle.Description = FilterOutTags(reader.content);
                             break;
                         default:

@@ -8,6 +8,7 @@ public class Newsarticle : ScriptableObject {
     public double Latitude;
     public double Longitude;
     public string Description;
+    public string ImageUrl;
 
     void OnEnable() {
         Longitude = 16.18 + Random.Range(-0.1f, 0.1f);
