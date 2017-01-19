@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-using System.Xml;
+using System.Text.RegularExpressions;
 
 public class rsstest : MonoBehaviour {
     private bool isInsideItem;
@@ -14,7 +14,6 @@ public class rsstest : MonoBehaviour {
         WWW www = new WWW(url);
         yield return www;
         List<Newsarticle> articles = Parse(www.text);
-        //List<Newsarticle> articles = new List<Newsarticle>();
 
         TextAsset gpsLocations = Resources.Load<TextAsset>("gps_tagged_news");
         List<Newsarticle> articles2 = Parse(gpsLocations.text);
@@ -24,6 +23,10 @@ public class rsstest : MonoBehaviour {
         foreach(Newsarticle article in articles) {
             MapManager.Instance.AddWebMarker(article);
         }
+    }
+
+    private string FilterOutTags(string s) {
+        return Regex.Replace(s, "&lt;.*?&gt;", "");
     }
 
     private List<Newsarticle> Parse(string s) {
@@ -57,7 +60,7 @@ public class rsstest : MonoBehaviour {
                             currentArticle.Latitude = double.Parse(reader.content);
                             break;
                         case "description":
-                            currentArticle.Description = reader.content;
+                            currentArticle.Description = FilterOutTags(reader.content);
                             break;
                         default:
                             break;
