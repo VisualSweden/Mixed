@@ -4,11 +4,13 @@ using System;
 
 public class ScriptEventSystem : MonoBehaviour {
     public delegate void locatiodDeletage(Location l);
+    public delegate void newsarticleDelegate(Newsarticle article);
 	public delegate void boolDelegate(bool b);
     public delegate void modeDelegate(Mode m);
 	public delegate void voidDelegate ();
 
     public event locatiodDeletage OnLocationPressed;
+    public event newsarticleDelegate OnArticlePressed;
     public event locatiodDeletage OnGoToLocation;
     public event modeDelegate OnSetMode;
 	public event boolDelegate OnSetSoundOn;
@@ -51,6 +53,11 @@ public class ScriptEventSystem : MonoBehaviour {
     public void SelectedMapMarker(Location location) {
         if (OnLocationPressed != null)
             OnLocationPressed(location);
+    }
+
+    public void SelectedNewsarticleMarker(Newsarticle article) {
+        if (OnArticlePressed != null)
+            OnArticlePressed(article);
     }
 
 	public void SetSoundOn(bool b) {

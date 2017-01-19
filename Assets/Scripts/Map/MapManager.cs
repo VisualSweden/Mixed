@@ -64,6 +64,17 @@ public class MapManager : MonoBehaviour {
         map.AddMarker(marker);
     }
 
+    public void AddWebMarker(Newsarticle article) {
+        OnlineMaps map = FindObjectOfType<OnlineMaps>();
+        OnlineMapsMarker marker = new OnlineMapsMarker();
+        marker.SetPosition(article.Longitude, article.Latitude);
+        //marker.texture = Location.Thumbnail;
+        //marker.OnClick += delegate (OnlineMapsMarkerBase obj) { Application.OpenURL(article.Link); };
+        marker.OnClick += delegate (OnlineMapsMarkerBase obj) { ScriptEventSystem.Instance.SelectedNewsarticleMarker(article); };
+        marker.Init();
+        map.AddMarker(marker);
+    }
+
     public void CenterOnPlayer(bool b) {
         trackPlayer = b;
         if (b) {

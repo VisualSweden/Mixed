@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<link>http://www.nt.se/</link>
+<title>Norrköpingsnyheter</title>
+<description>De senaste Norrköpingsnyheterna från nt.se</description>
+
+<pubDate>Thu, 19 Jan 2017 09:58:58 +0200</pubDate>
+<generator>Teknomedia.EdgeII.RSS</generator>
+<copyright />
+<lastBuildDate>Thu, 19 Jan 2017 09:58:58 +0200</lastBuildDate>
+<language>sv-SE</language>
+
+<item>
+<link>http://mobil.nt.se/nyheter/norrkoping/de-far-en-plats-i-white-guide-11082132.aspx</link>
+<title>De får en plats i White guide</title>
+<author />
+<pubDate>15-06-01</pubDate>
+<latitude>58.588811</latitude>
+<longitude>16.180918</longitude>
+<description>Antalet östgötakrogar som tar sig in på den prestigetyngda rankingen White Guide ökar.</description>
+<category>Norrköping</category>
+</item>
+
+<item>
+<link>http://mobil.nt.se/kultur-noje/har-ar-stans-basta-konstverk-11618605.aspx</link>
+<title>Här är stans bästa konstverk</title>
+<author />
+<pubDate>15-06-01</pubDate>
+<latitude>58.589114</latitude>
+<longitude>16.179322</longitude>
+<description>Är Norrköpings bästa offentliga konstverk ett finger åt framtiden?</description>
+<category>Norrköping</category>
+</item>
+
+
+<item>
+<link>http://mobil.nt.se/nyheter/norrkoping/coaching-truck-ska-minska-jobbstress-om4231205.aspx</link>
+<title>Coaching-truck ska minska jobbstress</title>
+<author />
+<pubDate>15-06-01</pubDate>
+<latitude>58.588943</latitude>
+<longitude>16.180513</longitude>
+<description>Frid i sinnet är ett rullande företag som snart parkerar i Norrköping. Det drivs av Sophie Joelsson som jobbar med personalgrupper som riskerar att drabbas av stressrelaterade sjukskrivningar.</description>
+<category>Norrköping</category>
+</item>
+
+
+<item>
+<link>http://mobil.nt.se/nyheter/norrkoping/lattare-for-nyanlanda-att-starta-eget-om4274868.aspx</link>
+<title>Lättare för nyanlända att starta eget</title>
+<author />
+<pubDate>15-06-01</pubDate>
+<latitude>58.588897</latitude>
+<longitude>16.180698</longitude>
+<description>I oktober startar en företagarutbildning i Norrköping för nyanlända och asylsökande som har ett eget driv och vill starta företag.</description>
+<category>Norrköping</category>
+</item>
+
+</channel>
+</rss>
