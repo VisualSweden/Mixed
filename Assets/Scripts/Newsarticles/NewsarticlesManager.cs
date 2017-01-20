@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 using System.Text.RegularExpressions;
 
-public class rsstest : MonoBehaviour {
+public class NewsarticlesManager : MonoBehaviour {
     private bool isInsideItem;
     private Newsarticle currentArticle;
 
@@ -32,7 +32,7 @@ public class rsstest : MonoBehaviour {
     private string FindImageUrl(string s) {
         Match match = Regex.Match(s, "src=\".*?\"");
         if (match.Success) {
-            return match.Value.Substring(5, match.Value.Length-7);
+            return match.Value.Substring(5, match.Value.Length-6);
         }
         return "";
     }
