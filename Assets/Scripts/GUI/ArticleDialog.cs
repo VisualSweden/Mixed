@@ -20,9 +20,14 @@ public class ArticleDialog : MonoBehaviour {
         thumbnailTexture = new Texture2D(4, 4, TextureFormat.DXT1, false);
         ScriptEventSystem.Instance.OnArticlePressed += OnArticlePressed;
         gameObject.SetActive(false);
-        ReadMore.onClick.AddListener(delegate () { Application.OpenURL(Article.Link); });
+        //ReadMore.onClick.AddListener(delegate () { Application.OpenURL(Article.Link); });
         Close.onClick.AddListener(delegate () { ShowDialog(false); });
         ScriptEventSystem.Instance.OnSetMode += OnSetMode;
+
+        ReadMore.onClick.AddListener(delegate () {
+            ScriptEventSystem.Instance.SetMode(ScriptEventSystem.Mode.AR);
+            ScriptEventSystem.Instance.EnterNewsARMode();
+        });
     }
 
     private void OnSetMode(ScriptEventSystem.Mode m) {
@@ -35,7 +40,7 @@ public class ArticleDialog : MonoBehaviour {
         Description.text = Article.Description;
         ShowDialog(true);
         articleImage.enabled = false;
-        if (article.ImageUrl!="")
+        if (article.ImageUrl != "")
             StartCoroutine(FetchImage());
     }
 
@@ -53,7 +58,6 @@ public class ArticleDialog : MonoBehaviour {
         www.Dispose();
         www = null;
 
-        //        articleImage.sprite = thumbnailTexture;
         articleImage.enabled = true;
     }
 

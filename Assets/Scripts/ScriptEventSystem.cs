@@ -8,6 +8,7 @@ public class ScriptEventSystem : MonoBehaviour {
 	public delegate void boolDelegate(bool b);
     public delegate void modeDelegate(Mode m);
 	public delegate void voidDelegate ();
+	public delegate void vector2Delegate (Vector2 pos);
 
     public event locatiodDeletage OnLocationPressed;
     public event newsarticleDelegate OnArticlePressed;
@@ -19,6 +20,7 @@ public class ScriptEventSystem : MonoBehaviour {
     public event voidDelegate OnVideoFinished;
     public event voidDelegate OnVideoRestart;
     public event voidDelegate OnPlayerMovesMap;
+    public event vector2Delegate OnEnterNewsARMode;
 
     public static ScriptEventSystem Instance;
 
@@ -83,5 +85,10 @@ public class ScriptEventSystem : MonoBehaviour {
     public void VideoRestart() {
         if (OnVideoRestart != null)
             OnVideoRestart();
+    }
+
+    public void EnterNewsARMode() {
+        if (OnEnterNewsARMode != null)
+            OnEnterNewsARMode(Vector2.zero);
     }
 }

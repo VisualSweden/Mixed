@@ -6,14 +6,18 @@ using System.Text.RegularExpressions;
 
 public class NewsarticlesManager : MonoBehaviour {
     private bool isInsideItem;
-    private Newsarticle currentArticle;
+    private List<Newsarticle> articles;
 
     public string url = "http://www.nt.se/nyheter/norrkoping/rss/";
 
+    public GameObject ArNewsArticlePrefab;
+
     IEnumerator Start() {
+        ScriptEventSystem.Instance.OnEnterNewsARMode += EnterNewsARMode;
+
         WWW www = new WWW(url);
         yield return www;
-        List<Newsarticle> articles = Parse(www.text);
+        articles = Parse(www.text);
 
         TextAsset gpsLocations = Resources.Load<TextAsset>("gps_tagged_news");
         List<Newsarticle> articles2 = Parse(gpsLocations.text);
@@ -22,6 +26,16 @@ public class NewsarticlesManager : MonoBehaviour {
         }
         foreach(Newsarticle article in articles) {
             MapManager.Instance.AddWebMarker(article);
+        }
+    }
+
+    public void EnterNewsARMode(Vector2 currentPosition) {
+        foreach(Newsarticle article in articles) {
+            float distance = OnlineMapsUtils.DistanceBetweenPoints(MapManager.Instance.location.position, new Vector2((float)article.Longitude, (float)article.Latitude)).magnitude * 1000;
+            if (distance < 100) {
+                ARNewsArticle arArticle = Instantiate(ArNewsArticlePrefab).GetComponent<ARNewsArticle>();
+                arArticle.SetArticle(article);
+            }
         }
     }
 
@@ -38,6 +52,7 @@ public class NewsarticlesManager : MonoBehaviour {
     }
 
     private List<Newsarticle> Parse(string s) {
+        Newsarticle currentArticle = null;
         List<Newsarticle> articles = new List<Newsarticle>();
         var reader = new TinyXmlReader(s);
         while (reader.Read()) {
@@ -70,6 +85,9 @@ public class NewsarticlesManager : MonoBehaviour {
                         case "description":
                             currentArticle.ImageUrl = FindImageUrl(reader.content);
                             currentArticle.Description = FilterOutTags(reader.content);
+                            break;
+                        case "image":
+                            currentArticle.ImageUrl = reader.content;
                             break;
                         default:
                             break;
