@@ -56,6 +56,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012133825764}
   - 114: {fileID: 114000014089958008}
+  - 114: {fileID: 114000011417444892}
   m_Layer: 8
   m_Name: ARNewsarticle
   m_TagString: Untagged
@@ -239,6 +240,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114000011417444892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010878841674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95d1f111d4bf814f994228a7ec9fa8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 1000014161860346, guid: 5bf213757bffa0943b5f70e7e095d965,
+    type: 2}
 --- !u!114 &114000011470753904
 MonoBehaviour:
   m_ObjectHideFlags: 1
