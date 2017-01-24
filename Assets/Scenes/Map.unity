@@ -258,6 +258,7 @@ MonoBehaviour:
   url: http://www.nt.se/nyheter/norrkoping/rss/
   ArNewsArticlePrefab: {fileID: 1000010878841674, guid: 8a338566c8a46ab4f8ecee0c3400663a,
     type: 2}
+  ArticleTexture: {fileID: 2800000, guid: 2a1b432d9fe3bb949b0b609f0a6e9859, type: 3}
 --- !u!4 &1343991703
 Transform:
   m_ObjectHideFlags: 0
