@@ -12,6 +12,8 @@ public class NewsarticlesManager : MonoBehaviour {
 
     public GameObject ArNewsArticlePrefab;
 
+    public Texture2D ArticleTexture;
+
     IEnumerator Start() {
         ScriptEventSystem.Instance.OnEnterNewsARMode += EnterNewsARMode;
 
@@ -25,7 +27,7 @@ public class NewsarticlesManager : MonoBehaviour {
             articles.Add(article);
         }
         foreach(Newsarticle article in articles) {
-            MapManager.Instance.AddWebMarker(article);
+            MapManager.Instance.AddWebMarker(article, ArticleTexture);
         }
     }
 

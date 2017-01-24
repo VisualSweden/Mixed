@@ -64,11 +64,11 @@ public class MapManager : MonoBehaviour {
         map.AddMarker(marker);
     }
 
-    public void AddWebMarker(Newsarticle article) {
+    public void AddWebMarker(Newsarticle article, Texture2D ArticleTexture) {
         OnlineMaps map = FindObjectOfType<OnlineMaps>();
         OnlineMapsMarker marker = new OnlineMapsMarker();
         marker.SetPosition(article.Longitude, article.Latitude);
-        //marker.texture = Location.Thumbnail;
+        marker.texture = ArticleTexture;
         //marker.OnClick += delegate (OnlineMapsMarkerBase obj) { Application.OpenURL(article.Link); };
         marker.OnClick += delegate (OnlineMapsMarkerBase obj) { ScriptEventSystem.Instance.SelectedNewsarticleMarker(article); };
         marker.Init();
