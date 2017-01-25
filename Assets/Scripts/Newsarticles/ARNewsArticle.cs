@@ -35,6 +35,7 @@ public class ARNewsArticle : MonoBehaviour {
 
     private void Instance_OnSetMode(ScriptEventSystem.Mode m) {
         if (m != ScriptEventSystem.Mode.AR) {
+            ScriptEventSystem.Instance.OnSetMode -= Instance_OnSetMode;
             Destroy(gameObject);
         }
     }

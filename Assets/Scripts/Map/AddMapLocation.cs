@@ -22,6 +22,7 @@ public class AddMapLocation : MonoBehaviour {
     }
 	private void AddLocation() {
 		MapManager.Instance.AddMarker(Location);
-		Destroy(this);
+        enabled = false;
+		//Destroy(this);
 	}
 }

@@ -12,11 +12,17 @@ public class LocationGUI : MonoBehaviour {
     void Start() {
         ScriptEventSystem.Instance.OnGoToLocation += Instance_OnGoToLocation;
         ScriptEventSystem.Instance.OnSetMode += Instance_OnSetMode;
+        ScriptEventSystem.Instance.OnEnterNewsARMode += Instance_OnEnterNewsARMode;
 
         ScriptEventSystem.Instance.OnSoundObjectVisible += () => { isObjectVisible = true; UpdateVisible(); };
         ScriptEventSystem.Instance.OnSoundObjectHidden += () => { isObjectVisible = false; UpdateVisible(); };
 
         gameObject.SetActive(false);
+    }
+
+    private void Instance_OnEnterNewsARMode(Vector2 pos) {
+        isOnLocation = false;
+        UpdateVisible();
     }
 
     private void Instance_OnSetMode(ScriptEventSystem.Mode m) {
