@@ -127,32 +127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetTime: 5
---- !u!21 &496331913
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Fotovandring1-4_scaledMaterial
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 2800000, guid: 628271fc4b22434d96d59301f7dd7dec, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1001 &889999613
 Prefab:
   m_ObjectHideFlags: 0
@@ -504,31 +478,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1000010162196518, guid: 9fc628103e063bb46b5bbf4cc825a799, type: 2}
-      propertyPath: m_Name
-      value: Mask
-      objectReference: {fileID: 0}
     - target: {fileID: 114000010772957840, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
       propertyPath: location
       value: 
       objectReference: {fileID: 126751920}
-    - target: {fileID: 114000013795598650, guid: 9fc628103e063bb46b5bbf4cc825a799,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 31d14dfdfca389b43960239d528d3075,
-        type: 3}
-    - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -50.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 136.4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9fc628103e063bb46b5bbf4cc825a799, type: 2}
   m_IsPrefabParent: 0
