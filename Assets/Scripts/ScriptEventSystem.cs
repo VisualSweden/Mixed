@@ -91,4 +91,12 @@ public class ScriptEventSystem : MonoBehaviour {
         if (OnEnterNewsARMode != null)
             OnEnterNewsARMode(Vector2.zero);
     }
+
+    // Enter map mode when toggle focus.
+    void OnApplicationPause(bool pauseStatus) {
+        if (pauseStatus) {
+            if (CurrentMode == Mode.AR)
+                SetMode(Mode.Map);
+        }
+    }
 }
