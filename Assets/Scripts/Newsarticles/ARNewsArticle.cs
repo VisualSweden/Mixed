@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Globalization;
 
 public class ARNewsArticle : MonoBehaviour {
     public Text Title;
@@ -11,8 +12,9 @@ public class ARNewsArticle : MonoBehaviour {
     private Newsarticle article;
 
     public void SetArticle(Newsarticle article) {
+        CultureInfo swedishCulture = CultureInfo.GetCultureInfo("sv-SE");
         Title.text = article.Title;
-        Date.text = article.Timestamp;
+        Date.text = "" + swedishCulture.Calendar.GetDayOfMonth(article.PublicationDate) + " " + swedishCulture.DateTimeFormat.GetMonthName(swedishCulture.Calendar.GetMonth(article.PublicationDate)) + " " + swedishCulture.Calendar.GetYear(article.PublicationDate);
         this.article = article;
         if (article.ImageUrl != "")
             Image.LoadImage(article.ImageUrl);

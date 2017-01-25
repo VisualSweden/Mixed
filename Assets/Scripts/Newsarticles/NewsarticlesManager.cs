@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using System;
 using System.Text.RegularExpressions;
 
 public class NewsarticlesManager : MonoBehaviour {
@@ -76,7 +76,9 @@ public class NewsarticlesManager : MonoBehaviour {
                             currentArticle.Title = reader.content;
                             break;
                         case "pubDate":
-                            currentArticle.Timestamp = reader.content;
+                            System.DateTime timestamp;
+                            System.DateTime.TryParse(reader.content, out timestamp);
+                            currentArticle.PublicationDate = timestamp;
                             break;
                         case "longitude":
                             currentArticle.Longitude = double.Parse(reader.content);
