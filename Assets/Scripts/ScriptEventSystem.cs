@@ -94,7 +94,7 @@ public class ScriptEventSystem : MonoBehaviour {
 
     // Enter map mode when toggle focus.
     void OnApplicationPause(bool pauseStatus) {
-        if (pauseStatus) {
+        if (!pauseStatus) {
             if (CurrentMode == Mode.AR)
                 SetMode(Mode.Map);
         }
