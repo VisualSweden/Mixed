@@ -13,7 +13,7 @@ public class ArrowPointing : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        sprite.transform.localPosition = new Vector3(0, Random.Range(-1f, 0f), 0);
+        //sprite.transform.localPosition = new Vector3(0, Random.Range(-1f, 0f), 0);
         PositionCamera = FindObjectOfType<GyroscopeCamera>().GetComponent<Camera>();
 	}
 	
