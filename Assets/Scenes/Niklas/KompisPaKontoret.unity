@@ -378,7 +378,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 141ae1132ff46f4469586922b5274acc,
+      objectReference: {fileID: 21300000, guid: d42ef27ebb6b0c34e82d577e090b1534,
         type: 3}
     - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
@@ -412,42 +412,42 @@ Prefab:
     - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.030153358
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.99954534
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 3.3560002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.78999996
+      value: 0.791
       objectReference: {fileID: 0}
     - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.78999996
+      value: 0.791
       objectReference: {fileID: 0}
     - target: {fileID: 224000013487725152, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.78999996
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000010386182632, guid: 9fc628103e063bb46b5bbf4cc825a799,
         type: 2}
