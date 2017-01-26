@@ -4829,7 +4829,7 @@ Prefab:
     - target: {fileID: 114000012401131070, guid: 9b97451be19958e46b89a91e90e1fc3e,
         type: 2}
       propertyPath: m_Text
-      value: Hitta
+      value: Karta
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b97451be19958e46b89a91e90e1fc3e, type: 2}
