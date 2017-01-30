@@ -33,11 +33,26 @@ public class GPSPositionedItem : MonoBehaviour {
     }
 
 	void Update() {
-		float userTileX, userTileY, markerTileX, markerTileY;
-		double angle = OnlineMapsUtils.Angle2D(Input.location.lastData.latitude, Input.location.lastData.longitude, Latitude, Longitude);
-
-		Vector3 pos = Quaternion.Euler (0, (float)angle, 0) * Vector3.forward *CameraDistance;
+        float angle = (float)Angle(new Vector2((float)Input.location.lastData.latitude, (float)Input.location.lastData.longitude), new Vector2((float)Latitude, (float)Longitude));
+		Vector3 pos = Quaternion.Euler (0, (float)angle, 0) * Vector3.forward * CameraDistance;
 		transform.position = pos;
 	}
+
+    private double Angle(Vector2 userCoordinares, Vector2 markerCoordinates) {
+        int zoom = 15;
+        int maxX = 1 << (zoom - 1);
+
+        double userTileX, userTileY, markerTileX, markerTileY;
+
+        OnlineMapsProjection projection = MapManager.Instance.map.projection;
+
+        projection.CoordinatesToTile(userCoordinares.x, userCoordinares.y, zoom, out userTileX, out userTileY);
+        projection.CoordinatesToTile(markerCoordinates.x, markerCoordinates.y, zoom, out markerTileX, out markerTileY);
+
+        // Calculate the angle between locations.
+        double angle = OnlineMapsUtils.Angle2D(userTileX, userTileY, markerTileX, markerTileY);
+
+        return angle;
+    }
 
 }
