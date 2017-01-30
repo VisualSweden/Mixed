@@ -27,7 +27,7 @@ public class ScriptEventSystem : MonoBehaviour {
     public Mode CurrentMode;
 
     public enum Mode {
-        Menu,
+        Intro,
         Map,
         AR
     }

@@ -6,7 +6,7 @@ public class EnableOnMode : MonoBehaviour {
 
 	void Start () {
         ScriptEventSystem.Instance.OnSetMode += OnSetMode;
-        gameObject.SetActive(false);
+        gameObject.SetActive(ScriptEventSystem.Instance.CurrentMode == VisibleInMode);
 	}
 
     private void OnSetMode(ScriptEventSystem.Mode m) {
