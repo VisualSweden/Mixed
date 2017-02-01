@@ -15,8 +15,6 @@ public class ScriptEventSystem : MonoBehaviour {
     public event locatiodDeletage OnGoToLocation;
     public event modeDelegate OnSetMode;
 	public event boolDelegate OnSetSoundOn;
-	public event voidDelegate OnSoundObjectVisible;
-	public event voidDelegate OnSoundObjectHidden;
     public event voidDelegate OnVideoFinished;
     public event voidDelegate OnVideoRestart;
     public event voidDelegate OnPlayerMovesMap;
@@ -65,16 +63,6 @@ public class ScriptEventSystem : MonoBehaviour {
 	public void SetSoundOn(bool b) {
 		if (OnSetSoundOn != null)
 			OnSetSoundOn(b);
-	}
-
-	public void SoundObjectVisible() {
-		if (OnSoundObjectVisible != null)
-			OnSoundObjectVisible();
-	}
-
-	public void SoundObjectHidden() {
-		if (OnSoundObjectHidden != null)
-			OnSoundObjectHidden();
 	}
 
     public void VideoFinished() {
