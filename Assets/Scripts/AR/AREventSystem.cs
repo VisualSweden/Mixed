@@ -42,24 +42,39 @@ public class AREventSystem : MonoBehaviour {
     }
 
     public void FoundTrackedLocation(Location l) {
+        if (CurrentMode == ARMode.NotInAR)
+            return;
         if (OnFoundTrackedLocation != null)
             OnFoundTrackedLocation(l);
         SetMode(ARMode.PureAR);
     }
 
     public void LostTrackedLocation(Location l) {
+        if (CurrentMode == ARMode.NotInAR)
+            return;
         if (OnLostTrackedLocation != null )
             OnLostTrackedLocation(l);
-        SetMode(ARMode.LookingForMarker);
+        if (ScriptEventSystem.Instance.CurrentLocation != null && ScriptEventSystem.Instance.CurrentLocation.MarkedPreviewImage)
+            SetMode(ARMode.LookingForMarker);
+        else
+            SetMode(ARMode.PureAR);
     }
 
     public void LostTrackedMovie(MediaPlayerCtrl movie) {
+        if (CurrentMode == ARMode.NotInAR)
+            return;
         if (OnLostTrackedMovie != null )
             OnLostTrackedMovie(movie);
-        SetMode(ARMode.PureAR);
+
+        if (ScriptEventSystem.Instance.CurrentLocation != null && ScriptEventSystem.Instance.CurrentLocation.MarkedPreviewImage)
+            SetMode(ARMode.LookingForMarker);
+        else
+            SetMode(ARMode.PureAR);
     }
 
     public void FoundTrackedMovie(MediaPlayerCtrl movie) {
+        if (CurrentMode == ARMode.NotInAR)
+            return;
         if (OnFoundTrackedMovie != null )
             OnFoundTrackedMovie(movie);
         SetMode(ARMode.VideoPlayer);

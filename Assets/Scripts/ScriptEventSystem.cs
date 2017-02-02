@@ -22,6 +22,8 @@ public class ScriptEventSystem : MonoBehaviour {
 
     public static ScriptEventSystem Instance;
 
+    public Location CurrentLocation;
+
     public Mode CurrentMode;
 
     public enum Mode {
@@ -46,6 +48,7 @@ public class ScriptEventSystem : MonoBehaviour {
     }
 
     public void GoToLocation(Location l) {
+        CurrentLocation = l;
         if (OnGoToLocation != null)
             OnGoToLocation(l);
     }
@@ -76,6 +79,7 @@ public class ScriptEventSystem : MonoBehaviour {
     }
 
     public void EnterNewsARMode() {
+        CurrentLocation = null;
         if (OnEnterNewsARMode != null)
             OnEnterNewsARMode(Vector2.zero);
     }
