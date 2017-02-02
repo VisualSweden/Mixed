@@ -51,6 +51,7 @@ public class MapManager : MonoBehaviour {
 
     public void FirstLocationRecieved() {
         HasPosition = true;
+        map.SetPosition(location.position.x, location.position.y);
         location.OnLocationInited -= FirstLocationRecieved;
     }
 

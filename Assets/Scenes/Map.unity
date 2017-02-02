@@ -524,7 +524,7 @@ MonoBehaviour:
   latitude: 58.587745
   longitude: 16.192420999999968
   _position: {x: 0, y: 0}
-  _zoom: 13
+  _zoom: 19
 --- !u!4 &1850017569
 Transform:
   m_ObjectHideFlags: 0
