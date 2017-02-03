@@ -162,7 +162,7 @@ MonoBehaviour:
   map: {fileID: 1850017568}
   location: {fileID: 1850017566}
   trackPlayer: 0
-  LimitLocation: 1
+  LimitLocation: 0
   maxLat: 58.62
   minLat: 58.53
   maxLng: 16.25
@@ -171,6 +171,8 @@ MonoBehaviour:
   minZoom: 13
   mapSnapBackDistance: 0.00005
   HasPosition: 0
+  interpolateSpeed: 2
+  playerTexture: {fileID: 2800000, guid: 54d3d634f40e5494dab435c7ec9295e4, type: 3}
 --- !u!4 &929814010
 Transform:
   m_ObjectHideFlags: 0
@@ -382,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoStopUpdateOnInput: 0
   compassThreshold: 8
-  createMarkerInUserPosition: 1
+  createMarkerInUserPosition: 0
   desiredAccuracy: 1
   emulatorCompass: 123
   emulatorPosition: {x: 16.18041, y: 58.58957}
@@ -390,7 +392,7 @@ MonoBehaviour:
   markerTooltip: 
   markerType: 0
   marker2DAlign: 4
-  marker2DTexture: {fileID: 2800000, guid: 54d3d634f40e5494dab435c7ec9295e4, type: 3}
+  marker2DTexture: {fileID: 2800000, guid: c0a5257e2ab748f469572ee1c53c1c2c, type: 3}
   marker3DPrefab: {fileID: 0}
   maxPositionCount: 3
   position: {x: 0, y: 0}
@@ -430,7 +432,22 @@ MonoBehaviour:
   default3DMarker: {fileID: 0}
   marker2DMode: 0
   marker2DSize: 100
-  markers3D: []
+  markers3D:
+  - label: 
+    range:
+      max: 20
+      min: 3
+      maxLimit: 20
+      minLimit: 3
+    _enabled: 1
+    latitude: 58.5928795021424
+    longitude: 16.1912712563026
+    _scale: 30
+    allowDefaultMarkerEvents: 0
+    control: {fileID: 0}
+    inited: 0
+    instance: {fileID: 0}
+    prefab: {fileID: 1000011151676484, guid: 8a3e475942e74e445a3d4965e0cc8661, type: 2}
   marker3DScale: 1
   bingAPI: 
   checkMarker2DVisibility: 0

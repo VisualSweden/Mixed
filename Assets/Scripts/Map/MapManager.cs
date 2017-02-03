@@ -25,6 +25,10 @@ public class MapManager : MonoBehaviour {
 
     private Vector2 oldMapLocation;
 
+    private OnlineMapsMarker3D playerMarker;
+    public float interpolateSpeed;
+    public Texture2D playerTexture;
+
     void Awake() {
         Instance = this;
         if (LimitLocation) {
@@ -32,14 +36,23 @@ public class MapManager : MonoBehaviour {
             map.zoomRange = new OnlineMapsRange(minZoom, maxZoom);
         }
         location.OnLocationInited += FirstLocationRecieved;
+
+        playerMarker = FindObjectOfType<OnlineMapsTileSetControl>().markers3D[0];
+
     }
 
     private void Update() {
+        if (playerMarker != null) {
+            Vector2 goal = Vector2.Lerp(playerMarker.position, location.position, Time.deltaTime * interpolateSpeed);
+            playerMarker.SetPosition(goal.x, goal.y);
+            map.needRedraw = true;
+        }
+
         if (trackPlayer) {
             if ((map.position - oldMapLocation).magnitude > mapSnapBackDistance) {
                 PlayerMovedMap();
             } else {
-                map.SetPosition(location.position.x, location.position.y);
+                map.SetPosition(location.position.y, location.position.x);
                 oldMapLocation = map.position;
             }
         }
@@ -50,6 +63,13 @@ public class MapManager : MonoBehaviour {
     }
 
     public void FirstLocationRecieved() {
+        /*
+        playerMarker = new OnlineMapsMarker();
+        playerMarker.SetPosition(location.position.x, location.position.y);
+        playerMarker.texture = playerTexture;
+        playerMarker.Init();
+        map.AddMarker(playerMarker);
+        */
         HasPosition = true;
         map.SetPosition(location.position.x, location.position.y);
         location.OnLocationInited -= FirstLocationRecieved;
