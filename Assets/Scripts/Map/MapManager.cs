@@ -46,14 +46,14 @@ public class MapManager : MonoBehaviour {
             Vector2 goal = Vector2.Lerp(playerMarker.position, location.position, Time.deltaTime * interpolateSpeed);
             playerMarker.SetPosition(goal.x, goal.y);
             map.needRedraw = true;
-        }
 
-        if (trackPlayer) {
-            if ((map.position - oldMapLocation).magnitude > mapSnapBackDistance) {
-                PlayerMovedMap();
-            } else {
-                map.SetPosition(location.position.y, location.position.x);
-                oldMapLocation = map.position;
+            if (trackPlayer) {
+                if ((map.position - oldMapLocation).magnitude > mapSnapBackDistance) {
+                    PlayerMovedMap();
+                } else {
+                    map.SetPosition(goal.x, goal.y);
+                    oldMapLocation = map.position;
+                }
             }
         }
     }
@@ -72,6 +72,7 @@ public class MapManager : MonoBehaviour {
         */
         HasPosition = true;
         map.SetPosition(location.position.x, location.position.y);
+        playerMarker.SetPosition(location.position.x, location.position.y);
         location.OnLocationInited -= FirstLocationRecieved;
     }
 
@@ -99,6 +100,8 @@ public class MapManager : MonoBehaviour {
     public void CenterOnPlayer(bool b) {
         trackPlayer = b;
         if (b) {
+            //map.SetPosition(location.position.x, location.position.y);
+            playerMarker.SetPosition(location.position.x, location.position.y);
             map.SetPosition(location.position.x, location.position.y);
             oldMapLocation = map.position;
             map.zoom = maxZoom;
