@@ -33,8 +33,8 @@ public class GPSPositionedItem : MonoBehaviour {
     }
 
 	void Update() {
-        float angle = (float)Angle(new Vector2((float)Input.location.lastData.latitude, (float)Input.location.lastData.longitude), new Vector2((float)Latitude, (float)Longitude));
-		Vector3 pos = Quaternion.Euler (0, (float)angle, 0) * Vector3.forward * CameraDistance;
+        float angle = (float)Angle(new Vector2((float)myLocation.Latitude, (float)myLocation.Longitude), new Vector2((float)Latitude, (float)Longitude));
+		Vector3 pos = Quaternion.Euler (0, -(float)angle, 0) * Vector3.forward * CameraDistance;
 		transform.position = pos;
 	}
 
