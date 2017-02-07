@@ -170,7 +170,7 @@ MonoBehaviour:
   maxZoom: 20
   minZoom: 13
   mapSnapBackDistance: 0.00005
-  HasPosition: 0
+  HasPosition: 1
   interpolateSpeed: 2
   playerTexture: {fileID: 2800000, guid: 54d3d634f40e5494dab435c7ec9295e4, type: 3}
 --- !u!4 &929814010
@@ -245,7 +245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1343991702
 MonoBehaviour:
   m_ObjectHideFlags: 0
