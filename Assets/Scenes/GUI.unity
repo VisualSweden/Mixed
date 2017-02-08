@@ -816,7 +816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7721907465c5a8549b6aab3f40144bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
 --- !u!224 &339105186 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224000013202696470, guid: 807e40e52af9125449ee972e3f28bd94,
@@ -1098,7 +1097,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 16, y: 8}
-  m_SizeDelta: {x: 221, y: 28}
+  m_SizeDelta: {x: 325.3, y: 28}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &412881840
 MonoBehaviour:
@@ -1121,10 +1120,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 5f89f1a2c9fe32546bc0a03adde139c7, type: 3}
-    m_FontSize: 14
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
