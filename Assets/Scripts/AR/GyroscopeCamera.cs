@@ -5,6 +5,7 @@ public class GyroscopeCamera : MonoBehaviour {
 	
 	void OnEnable () {
 		Input.gyro.enabled = true;
+        Input.compass.enabled = true;
 		Input.location.Start ();
 	}
 
