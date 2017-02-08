@@ -135,11 +135,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToActivate.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_LocalPosition.x
@@ -179,11 +179,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.data[0]
-      value: kitten_blanket_database
+      value: test_database
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToActivate.Array.data[0]
-      value: kitten_blanket_database
+      value: test_database
       objectReference: {fileID: 0}
     - target: {fileID: 11400018, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mAutoInitTracker
@@ -203,11 +203,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.data[1]
-      value: katscha
+      value: test_database
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToActivate.Array.data[1]
-      value: test_database
+      value: strykbraedan_logo
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_IsActive
@@ -215,7 +215,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.data[2]
-      value: strykbraedan_logo
+      value: test_database
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.data[3]
@@ -264,6 +264,10 @@ Prefab:
     - target: {fileID: 2000000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_CullingMask.m_Bits
       value: 4294967039
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
@@ -345,6 +349,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3f467f4129b7d4e8d485c3c9f8fba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentLocation:
+    Title: 
+    Description: 
+    Image: {fileID: 0}
+    MarkedPreviewImage: {fileID: 0}
+    Thumbnail: {fileID: 0}
+    Longitude: 0
+    Latitude: 0
+    TriggerDistance: 0
+    ARDataset: 
   CurrentMode: 0
 --- !u!4 &1121121838
 Transform:
@@ -387,3 +401,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VisibleInMode: 2
+--- !u!114 &1148963267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148963265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d3da9d53f17d947bb9bf6d0197e5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
