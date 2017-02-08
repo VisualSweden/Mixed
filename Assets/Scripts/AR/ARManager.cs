@@ -4,14 +4,14 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ARManager : MonoBehaviour {
-
     void Start() {
         ScriptEventSystem.Instance.OnSetMode += Instance_OnSetMode;
-        ScriptEventSystem.Instance.OnGoToLocation += Instance_OnGoToLocation;
+        ScriptEventSystem.Instance.OnGoToLocation += LoadLocation;
+        LoadLocation(ScriptEventSystem.Instance.CurrentLocation);
     }
 
-    private void Instance_OnGoToLocation(Location l) {
-        if (l.ARDataset != null) {
+    private void LoadLocation(Location l) {
+        if (l != null && l.ARDataset != null) {
             LoadDataSet(l.ARDataset);
         }
     }
@@ -53,7 +53,6 @@ public class ARManager : MonoBehaviour {
     // Load and activate a data set at the given path.
     private bool LoadDataSet(string dataSetPath) {
         ObjectTracker objectTracker = TrackerManager.Instance.GetTracker<ObjectTracker>();
-        objectTracker.Stop();
 
         foreach (var t in objectTracker.GetActiveDataSets()) {
             if (t.Path == GetFullPath(dataSetPath)) {
@@ -91,7 +90,6 @@ public class ARManager : MonoBehaviour {
         Debug.Log("Data set " + dataSetPath + " is not loaded. Loading and activating dataset.");
         objectTracker.ActivateDataSet(dataSet);
 
-        objectTracker.Start();
         return true;
     }
 }
