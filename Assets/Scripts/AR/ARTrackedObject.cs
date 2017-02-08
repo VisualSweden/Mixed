@@ -13,7 +13,9 @@ public class ARTrackedObject : MonoBehaviour, Vuforia.ITrackableEventHandler {
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED) {
-            AREventSystem.Instance.FoundTrackedLocation(location);
+            if (ScriptEventSystem.Instance.CurrentMode == ScriptEventSystem.Mode.AR && AREventSystem.Instance.CurrentMode == AREventSystem.ARMode.LookingForMarker) {
+                AREventSystem.Instance.FoundTrackedLocation(location);
+            }
         } else {
             AREventSystem.Instance.LostTrackedLocation(location);
         }
@@ -21,7 +23,6 @@ public class ARTrackedObject : MonoBehaviour, Vuforia.ITrackableEventHandler {
 
     void Start() {
         location = GetComponent<AddMapLocation>().Location;
-
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour) {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);

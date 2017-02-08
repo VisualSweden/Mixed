@@ -33,7 +33,7 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
                newStatus == TrackableBehaviour.Status.TRACKED ||
                newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED) {
-            if (ScriptEventSystem.Instance.CurrentMode == ScriptEventSystem.Mode.AR) {
+            if (ScriptEventSystem.Instance.CurrentMode == ScriptEventSystem.Mode.AR && AREventSystem.Instance.CurrentMode == AREventSystem.ARMode.LookingForMarker) {
                 //OnTrackingFound();
                 isTracked = true;
                 AREventSystem.Instance.FoundTrackedMovie(mediaPlayer);
