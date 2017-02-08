@@ -162,7 +162,7 @@ MonoBehaviour:
   map: {fileID: 1850017568}
   location: {fileID: 1850017566}
   trackPlayer: 0
-  LimitLocation: 0
+  LimitLocation: 1
   maxLat: 58.62
   minLat: 58.53
   maxLng: 16.25
@@ -170,7 +170,7 @@ MonoBehaviour:
   maxZoom: 20
   minZoom: 13
   mapSnapBackDistance: 0.00005
-  HasPosition: 1
+  HasPosition: 0
   interpolateSpeed: 2
   playerTexture: {fileID: 2800000, guid: 54d3d634f40e5494dab435c7ec9295e4, type: 3}
 --- !u!4 &929814010
