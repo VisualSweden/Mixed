@@ -5,7 +5,7 @@ using System;
 
 public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
     private TrackableBehaviour mTrackableBehaviour;
-    private MediaPlayerCtrl mediaPlayer;
+    public MediaPlayerCtrl mediaPlayer;
     private bool ignoreEnd = false;
     private Camera mainCamera;
 
@@ -16,7 +16,6 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
 
     void Awake() {
         mainCamera = FindObjectOfType<VuforiaBehaviour>().GetComponentInChildren<Camera>();
-        mediaPlayer = GetComponentInChildren<MediaPlayerCtrl>();
         mediaPlayer.OnEnd += delegate () {
             if(mediaPlayer.GetSeekPosition() > 0 && !ignoreEnd)
                 ScriptEventSystem.Instance.VideoFinished();
