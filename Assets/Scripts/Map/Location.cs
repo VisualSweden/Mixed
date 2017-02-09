@@ -3,6 +3,7 @@ using System.Collections;
 
 [System.Serializable]
 public class Location {
+    public int ID;
     public string Title;
     public string Description;
     public Sprite Image;
@@ -12,4 +13,5 @@ public class Location {
     public double Latitude;
     public double TriggerDistance;
     public string ARDataset;
+    public GameObject TrackedObject;
 }

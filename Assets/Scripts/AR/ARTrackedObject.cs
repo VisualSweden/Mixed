@@ -7,7 +7,8 @@ public class ARTrackedObject : MonoBehaviour, Vuforia.ITrackableEventHandler {
 
     private TrackableBehaviour mTrackableBehaviour;
 
-    private Location location;
+    [HideInInspector]
+    public Location location;
 
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus) {
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
@@ -22,7 +23,6 @@ public class ARTrackedObject : MonoBehaviour, Vuforia.ITrackableEventHandler {
     }
 
     void Start() {
-        location = GetComponent<AddMapLocation>().Location;
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour) {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);

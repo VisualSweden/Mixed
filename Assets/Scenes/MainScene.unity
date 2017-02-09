@@ -179,11 +179,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.data[0]
-      value: test_database
+      value: katscha
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToActivate.Array.data[0]
-      value: test_database
+      value: katscha
       objectReference: {fileID: 0}
     - target: {fileID: 11400018, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mAutoInitTracker
@@ -304,10 +304,7 @@ MonoBehaviour:
   Scenes:
   - GUI
   - Map
-  - Granden
-  - KompisPaKontoret
   - gps_positioned_items
-  - NorrkopingSciencePark
 --- !u!4 &1118955939
 Transform:
   m_ObjectHideFlags: 0
@@ -350,6 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentLocation:
+    ID: 0
     Title: 
     Description: 
     Image: {fileID: 0}
@@ -359,6 +357,7 @@ MonoBehaviour:
     Latitude: 0
     TriggerDistance: 0
     ARDataset: 
+    TrackedObject: {fileID: 0}
   CurrentMode: 0
 --- !u!4 &1121121838
 Transform:

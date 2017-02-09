@@ -13,7 +13,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GUI.unity
   - enabled: 0
     path: Assets/Scenes/Niklas/jonas_pratar.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Niklas/katscha.unity
   - enabled: 0
     path: "Assets/Scenes/Niklas/Gr\xE4nden.unity"
@@ -27,9 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Niklas/ljudslinga_walking_man.unity
   - enabled: 0
     path: Assets/Scenes/Niklas/ljudsling_man_i_fabrik.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Niklas/NorrkopingSciencePark.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Niklas/Granden.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Niklas/KompisPaKontoret.unity

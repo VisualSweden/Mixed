@@ -228,6 +228,7 @@ Transform:
   - {fileID: 1683119225}
   - {fileID: 1343991703}
   - {fileID: 1850017569}
+  - {fileID: 2043280841}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &1343991701
@@ -555,3 +556,139 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1276276419}
   m_RootOrder: 2
+--- !u!1 &2043280840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2043280841}
+  - 114: {fileID: 2043280842}
+  m_Layer: 0
+  m_Name: LocationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2043280841
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043280840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1276276419}
+  m_RootOrder: 3
+--- !u!114 &2043280842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043280840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9866c99125e3f439ead6e5549db454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddLocations:
+  - ID: 31
+    Title: "Kompis p\xE5 kontoret"
+    Description: Rikta kameran mot den rosa filten med texten EAST SWEDEN.
+    Image: {fileID: 21300000, guid: 50797ebe0e8ba6e4ea5a7893374b743d, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: d42ef27ebb6b0c34e82d577e090b1534,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.180531
+    Latitude: 58.589089
+    TriggerDistance: 2000
+    ARDataset: kitten_blanket_database
+    TrackedObject: {fileID: 1000014237260678, guid: 174389f849f2e834e8b86d0dbee7874c,
+      type: 2}
+  - ID: 67
+    Title: Laxholmstorget 3
+    Description: "St\xE4ll dig utanf\xF6r entr\xE9n till Laxholmstorget 3 och rikta
+      kameran mot texten p\xE5 d\xF6rren. Se bilder ovan. Klicka p\xE5 knappen STARTA
+      KAMERA."
+    Image: {fileID: 21300000, guid: 6e357dafd0cc16d47b0f820892611ea6, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: 4d1bd4122bcd2254ebb788391ce5509e,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.18054
+    Latitude: 58.58886
+    TriggerDistance: 2000
+    ARDataset: strykbraedan_logo
+    TrackedObject: {fileID: 1000010973073060, guid: f627c0dde73b8e444bd164f8b17a002b,
+      type: 2}
+  - ID: 33
+    Title: "Holmbrogr\xE4nd"
+    Description: "St\xE4ll dig framf\xF6r bilden med fabriken med skorstenarna."
+    Image: {fileID: 21300000, guid: eb32f8a2ddf62d44fa4436033df92abe, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: 65ea8573f16698c41981a873a91e97ea,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.1803253020014
+    Latitude: 58.5895258558882
+    TriggerDistance: 2000
+    ARDataset: test_database
+    TrackedObject: {fileID: 1000010764253398, guid: c7eb0d261ad61de41ada770a682ceb99,
+      type: 2}
+  - ID: 78
+    Title: "Holmbrogr\xE4nd"
+    Description: "St\xE4ll dig framf\xF6r bilden med m\xE4nniskorna som g\xE5r ut
+      genom en fabrik."
+    Image: {fileID: 21300000, guid: 6984fcf67e3edea439a64dd6af209352, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: 26ae0d5041988df4ca7827b0e67d222f,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.1803802872862
+    Latitude: 58.5896670410016
+    TriggerDistance: 2000
+    ARDataset: test_database
+    TrackedObject: {fileID: 1000011261607558, guid: bad2b2f2c0859184b890cc3a93855ac0,
+      type: 2}
+  - ID: 90
+    Title: "Holmbrogr\xE4nd"
+    Description: "St\xE4ll dig framf\xF6r bilden med mannen som g\xE5r bort\xE5t mellan
+      husen."
+    Image: {fileID: 21300000, guid: add0825517717534d9045ae5816b569d, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: 4fe0266aa196ef443adf3d50d335830c,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.18034273636
+    Latitude: 58.5895601038146
+    TriggerDistance: 2000
+    ARDataset: test_database
+    TrackedObject: {fileID: 1000011903887904, guid: 8cbd18bd903d4c9408f27ebf20ac77b3,
+      type: 2}
+  - ID: 91
+    Title: "Holmbrogr\xE4nd"
+    Description: "St\xE4ll dig framf\xF6r bilden med mannen som arbetar med en maskin."
+    Image: {fileID: 21300000, guid: 3ef28b6ec35c435468465aae6302516e, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: b0f723a7ff1dc2b4bb0bc30202813195,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.18038
+    Latitude: 58.5896
+    TriggerDistance: 2000
+    ARDataset: test_database
+    TrackedObject: {fileID: 1000012679673258, guid: 9d4953d7fa24c5147a72c9a101c5d76a,
+      type: 2}
+  - ID: 148
+    Title: "Holmbrogr\xE4nd"
+    Description: "St\xE4ll dig framf\xF6r bilden p\xE5 kvinnan med tr\xE5drullarna."
+    Image: {fileID: 21300000, guid: 62b82b551cbd0514588aeee24c737783, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: 0eaff9aea556e644cb469719f2032452,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.18039
+    Latitude: 58.58963
+    TriggerDistance: 2000
+    ARDataset: test_database
+    TrackedObject: {fileID: 1000011254991612, guid: e4f0f0f25cd494d4aa151473aa018780,
+      type: 2}

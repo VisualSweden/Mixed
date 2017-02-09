@@ -28,6 +28,11 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
         ScriptEventSystem.Instance.OnSetMode += OnSetMode;
     }
 
+    void OnDestroy() {
+        ScriptEventSystem.Instance.OnVideoRestart -= RestartVideo;
+        ScriptEventSystem.Instance.OnSetMode -= OnSetMode;
+    }
+
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus) {
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
                newStatus == TrackableBehaviour.Status.TRACKED ||
