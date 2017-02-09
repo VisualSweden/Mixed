@@ -4,17 +4,17 @@ using System.Collections;
 
 public class MemoryUsed : MonoBehaviour {
     private Text text;
-	void Start () {
+    void Start() {
         if (Debug.isDebugBuild) {
-        text = GetComponent<Text>();
+            text = GetComponent<Text>();
             Profiler.enabled = true;
         } else {
             Destroy(gameObject);
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-        text.text = "Allocated: " + Profiler.GetTotalAllocatedMemory()/1000000 + " MB\nReserved: " + Profiler.GetTotalReservedMemory()/1000000 + " MB";
-	}
+
+    // Update is called once per frame
+    void Update() {
+        text.text = "Allocated: " + Profiler.GetTotalAllocatedMemory() / 1000000 + " MB\nReserved: " + Profiler.GetTotalReservedMemory() / 1000000 + " MB";
+    }
 }

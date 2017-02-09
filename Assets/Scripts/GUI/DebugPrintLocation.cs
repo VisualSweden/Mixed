@@ -8,8 +8,12 @@ public class DebugPrintLocation : MonoBehaviour {
     private OnlineMapsLocationService location;
 
     void Start() {
-        text = GetComponent<Text>();
-        location = MapManager.Instance.location;
+        if (Debug.isDebugBuild) {
+            text = GetComponent<Text>();
+            location = MapManager.Instance.location;
+        } else {
+            Destroy(gameObject);
+        }
     }
 
     void Update() {
