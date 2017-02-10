@@ -164,8 +164,8 @@ PlayerSettings:
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/jesper.tingvall.HIQLIN/Git/MixedNKPGApp2/Misc/mixedexp.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: ProjectSettings\mixedexp.keystore
+  AndroidKeyaliasName: mixednkpg
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   androidEnableBanner: 0
