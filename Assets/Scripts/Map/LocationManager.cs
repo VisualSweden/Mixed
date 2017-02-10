@@ -27,9 +27,9 @@ public class LocationManager : MonoBehaviour {
     private void SpawnTrackedObject(Location l) {
         if (l.TrackedObject != null && !IsLocationLoaded(l)) {
             GameObject trackedObject = Instantiate(l.TrackedObject);
-            ARTrackedObject tracked = trackedObject.GetComponent<ARTrackedObject>();
-            if (tracked)
-                tracked.location = l;
+            ILocationObject tracked = trackedObject.GetComponent<ILocationObject>();
+            if (tracked != null)
+                tracked.Location = l;
             trackedObjects.Add(l.ID, trackedObject);
         }
     }

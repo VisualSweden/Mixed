@@ -11,7 +11,7 @@ public class ARManager : MonoBehaviour {
     }
 
     private void LoadLocation(Location l) {
-        if (l != null && l.ARDataset != null) {
+        if (l != null && l.ARDataset != null && l.ARDataset.Length > 0) {
             LoadDataSet(l.ARDataset);
         }
     }

@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011555010826}
-  - 114: {fileID: 114000010985675712}
   - 114: {fileID: 114000014084162376}
   - 114: {fileID: 114000013417610782}
   m_Layer: 8
@@ -123,29 +122,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114000010985675712
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011660283686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65eacb9dfac70e04ca115683c8349018, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Location:
-    ID: 0
-    Title: "Abrahams f\xE4rgeri"
-    Description: "St\xE4lld dig p\xE5 Bergsbron med \xF6n p\xE5 din h\xF6ger sida."
-    Image: {fileID: 21300000, guid: 3a0c9b14d28168d4cb9192b09698cb13, type: 3}
-    MarkedPreviewImage: {fileID: 0}
-    Thumbnail: {fileID: 2800000, guid: 8412b906b172e884a86471c8d539303b, type: 3}
-    Longitude: 16.17821
-    Latitude: 58.58949
-    TriggerDistance: 1000
-    ARDataset: 
-    TrackedObject: {fileID: 0}
 --- !u!114 &114000011821141354
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -3672,18 +3672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b307d87ad46fa49a77e945b7cb56e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location:
-    ID: 0
-    Title: 
-    Description: 
-    Image: {fileID: 0}
-    MarkedPreviewImage: {fileID: 0}
-    Thumbnail: {fileID: 0}
-    Longitude: 0
-    Latitude: 0
-    TriggerDistance: 0
-    ARDataset: 
-    TrackedObject: {fileID: 0}
 --- !u!114 &114000012711416002
 MonoBehaviour:
   m_ObjectHideFlags: 1

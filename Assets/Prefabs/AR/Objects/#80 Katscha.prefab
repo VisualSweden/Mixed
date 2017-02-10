@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010547740374}
-  - 114: {fileID: 114000014029874032}
   - 114: {fileID: 114000012620493892}
   - 114: {fileID: 114000011671472852}
   m_Layer: 8
@@ -170,27 +169,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdaa7393a56941c4bae35a47936f196b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000014029874032
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011706861440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65eacb9dfac70e04ca115683c8349018, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Location:
-    ID: 0
-    Title: Bostadshuset Katscha
-    Description: "St\xE5 p\xE5 mitten av Laxholmsbron rikta kameran mot bostadshuset
-      Katscha. "
-    Image: {fileID: 21300000, guid: 44715d0f34796724aad50b06fedcf9cd, type: 3}
-    MarkedPreviewImage: {fileID: 0}
-    Thumbnail: {fileID: 2800000, guid: 8412b906b172e884a86471c8d539303b, type: 3}
-    Longitude: 16.17996454488889
-    Latitude: 58.58881572806519
-    TriggerDistance: 1000
-    ARDataset: 
-    TrackedObject: {fileID: 0}

@@ -1,16 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class GPSPositionedItem : MonoBehaviour {
-    private Location myLocation;
+public class GPSPositionedItem : MonoBehaviour, ILocationObject {
 
     public float CameraDistance;
 
 	public double Longitude;
 	public double Latitude;
 
-	IEnumerator Start () {
-        myLocation = GetComponent<AddMapLocation>().Location;
+    private Location myLocation;
+    public Location Location {
+        get { return myLocation; }
+        set { myLocation = value; }
+    }
+
+    IEnumerator Start () {
         ScriptEventSystem.Instance.OnGoToLocation += Instance_OnLocationPressed;
         ScriptEventSystem.Instance.OnSetMode += Instance_OnSetMode;
 		yield return new WaitForFixedUpdate ();

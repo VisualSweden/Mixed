@@ -436,7 +436,6 @@ MonoBehaviour:
   Scenes:
   - GUI
   - Map
-  - gps_positioned_items
 --- !u!4 &1118955939
 Transform:
   m_ObjectHideFlags: 0

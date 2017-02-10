@@ -692,3 +692,28 @@ MonoBehaviour:
     ARDataset: test_database
     TrackedObject: {fileID: 1000011254991612, guid: e4f0f0f25cd494d4aa151473aa018780,
       type: 2}
+  - ID: 82
+    Title: "Abrahams f\xE4rgeri"
+    Description: "St\xE4lld dig p\xE5 Bergsbron med \xF6n p\xE5 din h\xF6ger sida."
+    Image: {fileID: 21300000, guid: 3a0c9b14d28168d4cb9192b09698cb13, type: 3}
+    MarkedPreviewImage: {fileID: 0}
+    Thumbnail: {fileID: 2800000, guid: 8412b906b172e884a86471c8d539303b, type: 3}
+    Longitude: 16.17821
+    Latitude: 58.58949
+    TriggerDistance: 2000
+    ARDataset: 
+    TrackedObject: {fileID: 1000011660283686, guid: 1937c309e16b40c41821a6d9e78e34b4,
+      type: 2}
+  - ID: 80
+    Title: Bostadshuset Katscha
+    Description: "St\xE5 p\xE5 mitten av Laxholmsbron rikta kameran mot bostadshuset
+      Katscha."
+    Image: {fileID: 21300000, guid: 44715d0f34796724aad50b06fedcf9cd, type: 3}
+    MarkedPreviewImage: {fileID: 0}
+    Thumbnail: {fileID: 2800000, guid: 8412b906b172e884a86471c8d539303b, type: 3}
+    Longitude: 16.1799645448889
+    Latitude: 58.5888157280652
+    TriggerDistance: 2000
+    ARDataset: 
+    TrackedObject: {fileID: 1000011706861440, guid: f11df5b0a3bc3654b91cfce3186c7467,
+      type: 2}

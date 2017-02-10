@@ -19,7 +19,7 @@ EditorBuildSettings:
     path: "Assets/Scenes/Niklas/Gr\xE4nden.unity"
   - enabled: 0
     path: Assets/Scenes/Jesper/Gamification.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Jesper/gps_positioned_items.unity
   - enabled: 0
     path: Assets/Scenes/Niklas/kitten_blanket.unity
