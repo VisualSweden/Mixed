@@ -25,7 +25,7 @@ GameObject:
   - 33: {fileID: 33000014263542752}
   - 114: {fileID: 114000011663963212}
   m_Layer: 0
-  m_Name: "#148 Video som triggar p\xE5 dam"
+  m_Name: "#148 Video som triggar pa\u030A dam"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

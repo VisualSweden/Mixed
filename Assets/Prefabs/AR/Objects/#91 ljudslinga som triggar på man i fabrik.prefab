@@ -43,7 +43,7 @@ GameObject:
   - 33: {fileID: 33000013052601666}
   - 114: {fileID: 114000010733905358}
   m_Layer: 0
-  m_Name: "#91 ljudslinga som triggar p\xE5 man i fabrik"
+  m_Name: "#91 ljudslinga som triggar pa\u030A man i fabrik"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

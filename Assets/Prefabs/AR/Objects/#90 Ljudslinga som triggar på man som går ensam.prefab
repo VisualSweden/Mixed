@@ -25,7 +25,7 @@ GameObject:
   - 33: {fileID: 33000013661600648}
   - 114: {fileID: 114000010124903888}
   m_Layer: 0
-  m_Name: "#90 Ljudslinga som triggar p\xE5 man som g\xE5r ensam"
+  m_Name: "#90 Ljudslinga som triggar pa\u030A man som ga\u030Ar ensam"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

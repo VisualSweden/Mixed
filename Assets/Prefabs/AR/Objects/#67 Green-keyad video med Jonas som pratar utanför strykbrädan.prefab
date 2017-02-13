@@ -25,7 +25,7 @@ GameObject:
   - 33: {fileID: 33000013515848248}
   - 114: {fileID: 114000014076457456}
   m_Layer: 0
-  m_Name: "#67 Green-keyad video med Jonas som pratar utanf\xF6r strykbr\xE4dan"
+  m_Name: "#67 Green-keyad video med Jonas som pratar utanfo\u0308r strykbra\u0308dan"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
