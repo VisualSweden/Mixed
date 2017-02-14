@@ -89,6 +89,7 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
     private void OnSetMode(ScriptEventSystem.Mode m) {
         if (m != ScriptEventSystem.Mode.AR) {
             OnTrackingLost();
+			Unload ();
             mediaPlayer.SeekTo(0);
         }
     }
@@ -103,7 +104,7 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
     private void OnTrackingLost() {
         isTracked = false;
         mediaPlayer.gameObject.SetActive(false);
-		Unload ();
+
         CancelInvoke("OnTrackingTimedOut");
         Invoke("OnTrackingTimedOut", resetTime);
     }
@@ -115,7 +116,8 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
 
     private void OnTrackingTimedOut() {
         if (ScriptEventSystem.Instance.CurrentMode == ScriptEventSystem.Mode.AR) {
-            mediaPlayer.SeekTo(0);
+            //mediaPlayer.SeekTo(0);
+			Unload ();
             //mediaPlayer.Play();
         }
     }
