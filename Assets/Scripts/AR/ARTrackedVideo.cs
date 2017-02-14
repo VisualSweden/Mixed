@@ -38,9 +38,11 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
 			mediaPlayer.Play ();
 			isLoaded = true;
 		}
+		CancelInvoke("OnTrackingTimedOut");
 	}
 
 	public void Unload() {
+		Debug.Log ("Unloaded " + mediaPlayer.m_strFileName);
 		mediaPlayer.UnLoad ();
 		isLoaded = false;
 	}
@@ -117,6 +119,7 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
     private void OnTrackingTimedOut() {
         if (ScriptEventSystem.Instance.CurrentMode == ScriptEventSystem.Mode.AR) {
             //mediaPlayer.SeekTo(0);
+			//Debug.Log("Timed out");
 			Unload ();
             //mediaPlayer.Play();
         }
