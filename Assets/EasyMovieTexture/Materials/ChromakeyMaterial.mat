@@ -24,7 +24,7 @@ Material:
     m_Floats:
     - first:
         name: _slope
-      second: 0.2
+      second: 0
     - first:
         name: _thresh
       second: 0.8
