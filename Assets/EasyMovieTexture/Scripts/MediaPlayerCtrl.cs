@@ -67,7 +67,7 @@ public class MediaPlayerCtrl : MonoBehaviour
 	[DllImport ("BlueDoveMediaRender")]
 	private static extern void InitNDK();
 
-#if UNITY_5_2 
+	#if UNITY_5_2  || UNITY_5_3_OR_NEWER
 	[DllImport ("BlueDoveMediaRender")]
 	private static extern IntPtr EasyMovieTextureRender();
 #endif
@@ -440,7 +440,7 @@ public class MediaPlayerCtrl : MonoBehaviour
 
 			
 
-	#if UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5
+	#if UNITY_5_2 || UNITY_5_3_OR_NEWER
 				Call_SetUnityTexture((int)m_texPtr);
 #else
 				Call_SetUnityTexture (m_VideoTexture.GetNativeTextureID ());
@@ -580,7 +580,7 @@ public class MediaPlayerCtrl : MonoBehaviour
 
 		m_texPtr = m_VideoTexture.GetNativeTexturePtr ();
 
-	#if UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5
+	#if UNITY_5_2 || UNITY_5_3_OR_NEWER
 		Call_SetUnityTexture((int)m_texPtr);
 	#else
 		Call_SetUnityTexture (m_VideoTexture.GetNativeTextureID ());
@@ -1056,7 +1056,7 @@ public class MediaPlayerCtrl : MonoBehaviour
 #if UNITY_5
 		if( SystemInfo.graphicsMultiThreaded == true)
 		{
-	#if UNITY_5_2 
+	#if UNITY_5_2 || UNITY_5_3_OR_NEWER
 			GL.IssuePluginEvent(EasyMovieTextureRender(), 5 + m_iAndroidMgrID * 10 + 7000);
 #else
 			GL.IssuePluginEvent(5 + m_iAndroidMgrID * 10 + 7000);
@@ -1082,7 +1082,7 @@ public class MediaPlayerCtrl : MonoBehaviour
 		{
 
 
-	#if UNITY_5_2 
+	#if UNITY_5_2  || UNITY_5_3_OR_NEWER
 			GL.IssuePluginEvent(EasyMovieTextureRender(), 4 + m_iAndroidMgrID * 10 + 7000);
 #else
 			GL.IssuePluginEvent(4 + m_iAndroidMgrID * 10 + 7000);
@@ -1106,7 +1106,7 @@ public class MediaPlayerCtrl : MonoBehaviour
 		{
 			GetJavaObject().Call("NDK_SetFileName", strFileName);
 
-	#if UNITY_5_2 
+	#if UNITY_5_2  || UNITY_5_3_OR_NEWER
 			GL.IssuePluginEvent(EasyMovieTextureRender(), 1 + m_iAndroidMgrID * 10 + 7000);
 #else
 			GL.IssuePluginEvent(1+ m_iAndroidMgrID * 10 + 7000);
@@ -1188,7 +1188,7 @@ public class MediaPlayerCtrl : MonoBehaviour
 #if UNITY_5
 		if( SystemInfo.graphicsMultiThreaded == true)
 		{
-	#if UNITY_5_2 
+	#if UNITY_5_2  || UNITY_5_3_OR_NEWER
 			GL.IssuePluginEvent(EasyMovieTextureRender(), 3 + m_iAndroidMgrID * 10 + 7000);
 #else
 			GL.IssuePluginEvent(3+ m_iAndroidMgrID * 10 + 7000);
@@ -1288,7 +1288,7 @@ public class MediaPlayerCtrl : MonoBehaviour
 		{
 
 
-	#if UNITY_5_2 
+	#if UNITY_5_2  || UNITY_5_3_OR_NEWER
 			GL.IssuePluginEvent(EasyMovieTextureRender(), 2 + m_iAndroidMgrID * 10 + 7000);
 #else
 			GL.IssuePluginEvent(2+ m_iAndroidMgrID * 10 + 7000);
@@ -1349,7 +1349,7 @@ public class MediaPlayerCtrl : MonoBehaviour
 #if UNITY_5
 		if( SystemInfo.graphicsMultiThreaded == true)
 		{
-	#if UNITY_5_2 
+	#if UNITY_5_2  || UNITY_5_3_OR_NEWER
 			GL.IssuePluginEvent(EasyMovieTextureRender(), 0 + m_iAndroidMgrID * 10 + 7000);
 #else
 			GL.IssuePluginEvent(0+ m_iAndroidMgrID * 10 + 7000);
@@ -2772,6 +2772,7 @@ AVHWAccel *ff_find_hwaccel( AVCodecID codec_id,  AVPixelFormat pix_fmt)
 
 
     
+    private int m_LastAudioPartSetted = -1;
 	
 	private void Call_UpdateVideoTexture()
 	{
@@ -2940,11 +2941,11 @@ AVHWAccel *ff_find_hwaccel( AVCodecID codec_id,  AVPixelFormat pix_fmt)
 
 				//do
 				{
-	#if (UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5)
+	#if (UNITY_5_2 || UNITY_5_3_OR_NEWER)
           
             if( listVideo.Count > 0)
             {
-				SetTextureFromUnity (m_iID,m_VideoTexture.GetNativeTexturePtr (), m_iWidth, m_iHeight, listVideo.Dequeue());
+				SetTextureFromUnity (m_iID,m_texPtr, m_iWidth, m_iHeight, listVideo.Dequeue());
 				GL.IssuePluginEvent (GetRenderEventFunc (), 7000 + m_iID);
 
 
@@ -3078,76 +3079,87 @@ AVHWAccel *ff_find_hwaccel( AVCodecID codec_id,  AVPixelFormat pix_fmt)
 						bVideoFirstFrameReady = false;
 					}
 
-					for (int i = 0; i < listAudio.Count; i++) {
+                    if (listAudio.Count > 0)
+                    {
+                        if (audioSource == null /*&& (int)((float)pAudioCodecContext->sample_rate * ((float)listAudioPtsTime[i] + ((float)Call_GetDuration() / 1000.0f))) > 0*/)
+                        {
+                            audioSource = gameObject.AddComponent<AudioSource>();
+                        }
+
+                        if (audioClip == null && audioSource != null)
+                        {
+
+                            /*if ((float)Call_GetDuration() <= 0)
+                    {
+                        audioClip = AudioClip.Create("videoAudio",(int)((float)pAudioCodecContext->sample_rate * ((float)listAudioPtsTime[i] + 600.0f)),pAudioCodecContext->channels,pAudioCodecContext->sample_rate,true,OnAudioRead);
+                    }
+                    else*/
+                            {
+                                /*if (Call_GetDuration () > 1500000) {
+                            audioClip = AudioClip.Create("videoAudio",(int)((float)pAudioCodecContext->sample_rate * ((float)listAudioPtsTime[i] + 10.0f)),pAudioCodecContext->channels,pAudioCodecContext->sample_rate,false);
+                        }
+                        else{
+                            audioClip = AudioClip.Create("videoAudio",(int)((float)pAudioCodecContext->sample_rate * ((float)listAudioPtsTime[i] + 600.0f)),pAudioCodecContext->channels,pAudioCodecContext->sample_rate,false);
+                        }*/
+#if UNITY_5
+                                audioClip = AudioClip.Create("videoAudio", (int)((float)pAudioCodecContext->sample_rate * 600.0f), pAudioCodecContext->channels, pAudioCodecContext->sample_rate, false);
 
 
-						if(audioSource == null /*&& (int)((float)pAudioCodecContext->sample_rate * ((float)listAudioPtsTime[i] + ((float)Call_GetDuration() / 1000.0f))) > 0*/)
-						{
-							audioSource = gameObject.AddComponent<AudioSource>();
-						}
-
-						if(audioClip == null && audioSource != null )
-						{
-
-							/*if ((float)Call_GetDuration() <= 0)
-					{
-						audioClip = AudioClip.Create("videoAudio",(int)((float)pAudioCodecContext->sample_rate * ((float)listAudioPtsTime[i] + 600.0f)),pAudioCodecContext->channels,pAudioCodecContext->sample_rate,true,OnAudioRead);
-					}
-					else*/
-							{
-								/*if (Call_GetDuration () > 1500000) {
-							audioClip = AudioClip.Create("videoAudio",(int)((float)pAudioCodecContext->sample_rate * ((float)listAudioPtsTime[i] + 10.0f)),pAudioCodecContext->channels,pAudioCodecContext->sample_rate,false);
-						}
-						else{
-							audioClip = AudioClip.Create("videoAudio",(int)((float)pAudioCodecContext->sample_rate * ((float)listAudioPtsTime[i] + 600.0f)),pAudioCodecContext->channels,pAudioCodecContext->sample_rate,false);
-						}*/
-	#if UNITY_5
-								audioClip = AudioClip.Create("videoAudio",(int)((float)pAudioCodecContext->sample_rate * 600.0f),pAudioCodecContext->channels,pAudioCodecContext->sample_rate,false);
+#else
+    audioClip = AudioClip.Create("videoAudio",(int)((float)pAudioCodecContext->sample_rate * 600.0f),pAudioCodecContext->channels,pAudioCodecContext->sample_rate,false,false);
 
 
-	#else
-	audioClip = AudioClip.Create("videoAudio",(int)((float)pAudioCodecContext->sample_rate * 600.0f),pAudioCodecContext->channels,pAudioCodecContext->sample_rate,false,false);
+#endif
 
-
-	#endif
-
-							}
-
-
-
-
-							audioSource.clip = audioClip;
-							//audioSource.Play();
-
-							//AudioSource.PlayClipAtPoint(audioClip,new Vector3(0,0,0));
-						}
-
-						if (audioSource != null && Call_GetDuration() >0 ) {
-
-
-							if (listAudioPts.Count > i) {
-								if (listAudioPts [i] >= 0) {
-
-									{
-										/*if (listAudioPts [i] > (int)((float)pAudioCodecContext->sample_rate * ((float)listAudioPtsTime [i] + ((float)Call_GetDuration () / 1000.0f)))) {
-									audioClip.SetData (listAudio [i], (int)(((double)pAudioCodecContext->sample_rate) * listAudioPtsTime [i]));
-								} else*/ {
-											//Debug.Log(audioSource.time  + " " + (float)listAudioPtsTime[i]  + " " +listAudioPts [i]   +" " +  fLastFrameTime);
-
-											audioClip.SetData(listAudio[i],(int)(listAudioPts[i] %  (pAudioCodecContext->sample_rate * 600.0f))  );
-
-										}
-									}
-								}
-							}
-
-							//if(audioSource.isPlaying == false)
-							//audioSource.Play();
-						}
+                            }
 
 
 
-					}
+
+                            audioSource.clip = audioClip;
+                            //audioSource.Play();
+
+                            //AudioSource.PlayClipAtPoint(audioClip,new Vector3(0,0,0));
+                        }
+                    }
+
+                    // Just to be sure I guess - don't know what migh happen if I seek in video etc...
+                    if (m_LastAudioPartSetted > listAudio.Count)
+                    {
+                        m_LastAudioPartSetted = -1;
+                    }
+
+                    // using m_LastAudioPartSetted - 1 again to be sure - what if the last part of audio gets updated/appended? IDK...
+                    for (int i = Math.Max(0, m_LastAudioPartSetted - 1); i < listAudio.Count; i++) {
+
+                        m_LastAudioPartSetted = i;
+
+                        if (audioSource != null && Call_GetDuration() >0 ) {
+
+
+                            if (listAudioPts.Count > i) {
+                                if (listAudioPts [i] >= 0) {
+
+                                    {
+                                        /*if (listAudioPts [i] > (int)((float)pAudioCodecContext->sample_rate * ((float)listAudioPtsTime [i] + ((float)Call_GetDuration () / 1000.0f)))) {
+                                    audioClip.SetData (listAudio [i], (int)(((double)pAudioCodecContext->sample_rate) * listAudioPtsTime [i]));
+                                } else*/ {
+                                            //Debug.Log(audioSource.time  + " " + (float)listAudioPtsTime[i]  + " " +listAudioPts [i]   +" " +  fLastFrameTime);
+
+                                            audioClip.SetData(listAudio[i],(int)(listAudioPts[i] %  (pAudioCodecContext->sample_rate * 600.0f))  );
+
+                                        }
+                                    }
+                                }
+                            }
+
+                            //if(audioSource.isPlaying == false)
+                            //audioSource.Play();
+                        }
+
+
+
+                    }
 
 
 

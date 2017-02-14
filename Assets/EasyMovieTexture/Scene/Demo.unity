@@ -226,7 +226,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0082db35c5d5614f9e8c63a7f86aa4e, type: 2}
-  m_RootGameObject: {fileID: 1701065468}
+  m_RootGameObject: {fileID: 1220076389}
   m_IsPrefabParent: 0
 --- !u!1001 &1200374298
 Prefab:
@@ -291,17 +291,17 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: f0082db35c5d5614f9e8c63a7f86aa4e, type: 2}
   m_RootGameObject: {fileID: 554063461}
   m_IsPrefabParent: 0
---- !u!1 &1701065468
+--- !u!1 &1220076389
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: f0082db35c5d5614f9e8c63a7f86aa4e, type: 2}
   m_PrefabInternal: {fileID: 1017825135}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1701065472}
-  - 114: {fileID: 1701065471}
-  - 33: {fileID: 1701065470}
-  - 23: {fileID: 1701065469}
+  - 4: {fileID: 1220076393}
+  - 114: {fileID: 1220076392}
+  - 33: {fileID: 1220076391}
+  - 23: {fileID: 1220076390}
   m_Layer: 0
   m_Name: VideoManager
   m_TagString: Untagged
@@ -309,13 +309,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &1701065469
+--- !u!23 &1220076390
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: f0082db35c5d5614f9e8c63a7f86aa4e,
     type: 2}
   m_PrefabInternal: {fileID: 1017825135}
-  m_GameObject: {fileID: 1701065468}
+  m_GameObject: {fileID: 1220076389}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -339,21 +339,21 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &1701065470
+--- !u!33 &1220076391
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: f0082db35c5d5614f9e8c63a7f86aa4e,
     type: 2}
   m_PrefabInternal: {fileID: 1017825135}
-  m_GameObject: {fileID: 1701065468}
+  m_GameObject: {fileID: 1220076389}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1701065471
+--- !u!114 &1220076392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: f0082db35c5d5614f9e8c63a7f86aa4e,
     type: 2}
   m_PrefabInternal: {fileID: 1017825135}
-  m_GameObject: {fileID: 1701065468}
+  m_GameObject: {fileID: 1220076389}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb521e9ace49d8546a83f420a0debd12, type: 3}
@@ -361,20 +361,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_strFileName: EasyMovieTexture.mp4
   m_TargetMaterial:
-  - {fileID: 1701065468}
+  - {fileID: 1220076389}
   m_bFullScreen: 0
   m_bSupportRockchip: 1
   m_ScaleValue: 0
   m_objResize:
-  - {fileID: 1701065468}
+  - {fileID: 1220076389}
   m_bLoop: 1
   m_bAutoPlay: 1
---- !u!4 &1701065472
+--- !u!4 &1220076393
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: f0082db35c5d5614f9e8c63a7f86aa4e, type: 2}
   m_PrefabInternal: {fileID: 1017825135}
-  m_GameObject: {fileID: 1701065468}
+  m_GameObject: {fileID: 1220076389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5.75, z: 6}
   m_LocalScale: {x: 8, y: 8, z: 8}

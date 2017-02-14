@@ -24,14 +24,14 @@ Material:
     m_Floats:
     - first:
         name: _slope
-      second: 0.234
+      second: 0.2
     - first:
         name: _thresh
-      second: 0.3
+      second: 0.8
     m_Colors:
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _keyingColor
-      second: {r: 0.44705883, g: 0.654902, b: 0.40784314, a: 1}
+      second: {r: 0, g: 1, b: 0, a: 1}

@@ -14,6 +14,8 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
 
     public float resetTime;
 
+	public bool isLoaded;
+
     void Awake() {
         mainCamera = FindObjectOfType<VuforiaBehaviour>().GetComponentInChildren<Camera>();
         mediaPlayer.OnEnd += delegate () {
@@ -27,6 +29,21 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
         ScriptEventSystem.Instance.OnVideoRestart += RestartVideo;
         ScriptEventSystem.Instance.OnSetMode += OnSetMode;
     }
+
+	public void LoadAndPlay() {
+		if (isLoaded){
+			mediaPlayer.Play ();
+		} else {
+			mediaPlayer.Load (mediaPlayer.m_strFileName);
+			mediaPlayer.Play ();
+			isLoaded = true;
+		}
+	}
+
+	public void Unload() {
+		mediaPlayer.UnLoad ();
+		isLoaded = false;
+	}
 
     void OnDestroy() {
         ScriptEventSystem.Instance.OnVideoRestart -= RestartVideo;
@@ -65,7 +82,6 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
                     OnTrackingFound();
                     isVideoVisible = true;
                 }
-
             }
         }
     }
@@ -81,12 +97,13 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
         isTracked = true;
         CancelInvoke("OnTrackingTimedOut");
         mediaPlayer.gameObject.SetActive(true);
-        mediaPlayer.Play();
+		LoadAndPlay ();
     }
 
     private void OnTrackingLost() {
         isTracked = false;
         mediaPlayer.gameObject.SetActive(false);
+		Unload ();
         CancelInvoke("OnTrackingTimedOut");
         Invoke("OnTrackingTimedOut", resetTime);
     }
@@ -106,13 +123,13 @@ public class ARTrackedVideo : MonoBehaviour, Vuforia.ITrackableEventHandler {
     private void RestartVideo() {
         if (ScriptEventSystem.Instance.CurrentMode == ScriptEventSystem.Mode.AR && mediaPlayer.gameObject.activeInHierarchy) {
             ignoreEnd = true;
-            mediaPlayer.Play();
+			LoadAndPlay ();
             Invoke("PlayVideo", 0.01f);
         }
     }
 
     private void PlayVideo() {
-        mediaPlayer.Play();
+		LoadAndPlay ();
         Invoke("IgnoreEnd", 1);
     }
 

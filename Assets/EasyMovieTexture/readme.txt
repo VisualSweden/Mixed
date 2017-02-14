@@ -12,17 +12,20 @@ And the this demo movie licensing. (c) copyright 2006, Blender Foundation / Neth
 http://orange.blender.org/blog/creative-commons-license-2/
 
 
-Editor On the Android Platform API can not be used ....
-
-Only works with Android devices.
 
 
+Update ( Ver. 3.56)
 
-iOS 
+1. Fixed a problem where Pause () function does not work when plugging in headset.(IOS)
 
-The original source of the following site.( iOS Source )
-(https://github.com/unity3d-jp/iOS-VideoPlayerPlugin)
+2. Modifying Cubemap Modeling Data
 
-Created by modifying the source.
+3. Modifying Unity 5.6 Support
+
+
+
+
+
+
 
 
