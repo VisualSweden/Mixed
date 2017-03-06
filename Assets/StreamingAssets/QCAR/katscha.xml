@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Fotovandring1-24" size="1.000000 0.666667" />
+    <ImageTarget name="Fotovandring1-11" size="1.000000 0.666667" />
+    <ImageTarget name="Fotovandring1-15" size="1.000000 1.954461" />
+    <ImageTarget name="Fotovandring1-13" size="1.000000 1.500000" />
+    <ImageTarget name="Fotovandring1-14" size="1.000000 1.079905" />
+  </Tracking>
+</QCARConfig>

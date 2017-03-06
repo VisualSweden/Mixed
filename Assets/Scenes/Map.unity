@@ -1,0 +1,719 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+SceneSettings:
+  m_ObjectHideFlags: 0
+  m_PVSData: 
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 7
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 7
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 4
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_DirectLightInLightProbes: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+  m_LightingDataAsset: {fileID: 0}
+  m_RuntimeCPUUsage: 25
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    accuratePlacement: 0
+    minRegionArea: 2
+    cellSize: 0.16666667
+    manualCellSize: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1001 &796695362
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013884380286, guid: ed414270d26395a438778b33aa74e342, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013884380286, guid: ed414270d26395a438778b33aa74e342, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013884380286, guid: ed414270d26395a438778b33aa74e342, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013884380286, guid: ed414270d26395a438778b33aa74e342, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013884380286, guid: ed414270d26395a438778b33aa74e342, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013884380286, guid: ed414270d26395a438778b33aa74e342, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013884380286, guid: ed414270d26395a438778b33aa74e342, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013884380286, guid: ed414270d26395a438778b33aa74e342, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ed414270d26395a438778b33aa74e342, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &929814008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 929814010}
+  - 114: {fileID: 929814009}
+  m_Layer: 0
+  m_Name: MapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &929814009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929814008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93386bc3207215d43b63c44e6bfe8353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 1850017568}
+  location: {fileID: 1850017566}
+  trackPlayer: 0
+  LimitLocation: 1
+  maxLat: 58.62
+  minLat: 58.53
+  maxLng: 16.25
+  minLng: 16.1
+  maxZoom: 20
+  minZoom: 13
+  mapSnapBackDistance: 0.00005
+  HasPosition: 0
+  interpolateSpeed: 2
+  playerTexture: {fileID: 2800000, guid: 54d3d634f40e5494dab435c7ec9295e4, type: 3}
+--- !u!4 &929814010
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929814008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!1 &1276276417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1276276419}
+  - 114: {fileID: 1276276418}
+  m_Layer: 0
+  m_Name: MapSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1276276418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1276276417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05bbab64f294d2b47aafbae80afa7e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VisibleInMode: 1
+--- !u!4 &1276276419
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1276276417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1683119225}
+  - {fileID: 1343991703}
+  - {fileID: 1850017569}
+  - {fileID: 2043280841}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!1 &1343991701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1343991703}
+  - 114: {fileID: 1343991702}
+  m_Layer: 0
+  m_Name: Newsfeed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1343991702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343991701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c87043cee7915d4ab59a3f9e10eb7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: http://www.nt.se/nyheter/norrkoping/rss/
+  ArNewsArticlePrefab: {fileID: 1000010878841674, guid: 8a338566c8a46ab4f8ecee0c3400663a,
+    type: 2}
+  ArticleTexture: {fileID: 2800000, guid: 2a1b432d9fe3bb949b0b609f0a6e9859, type: 3}
+--- !u!4 &1343991703
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1343991701}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.481083, y: -2.8475695, z: 16.30812}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1276276419}
+  m_RootOrder: 1
+--- !u!1 &1683119220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1683119225}
+  - 20: {fileID: 1683119224}
+  - 92: {fileID: 1683119223}
+  - 124: {fileID: 1683119222}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!124 &1683119222
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683119220}
+  m_Enabled: 1
+--- !u!92 &1683119223
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683119220}
+  m_Enabled: 1
+--- !u!20 &1683119224
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683119220}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1536
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &1683119225
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1683119220}
+  m_LocalRotation: {x: -0.000000030908623, y: 0.7071068, z: -0.7071068, w: -0.000000030908623}
+  m_LocalPosition: {x: -512, y: 870, z: 512}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1276276419}
+  m_RootOrder: 0
+--- !u!1 &1850017565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1850017569}
+  - 114: {fileID: 1850017568}
+  - 114: {fileID: 1850017567}
+  - 114: {fileID: 1850017566}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1850017566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850017565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23cad15691a9de6478a78e8f68ae6ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoStopUpdateOnInput: 0
+  compassThreshold: 8
+  createMarkerInUserPosition: 0
+  desiredAccuracy: 1
+  emulatorCompass: 123
+  emulatorPosition: {x: 16.18041, y: 58.58957}
+  findLocationByIP: 0
+  markerTooltip: 
+  markerType: 0
+  marker2DAlign: 4
+  marker2DTexture: {fileID: 2800000, guid: c0a5257e2ab748f469572ee1c53c1c2c, type: 3}
+  marker3DPrefab: {fileID: 0}
+  maxPositionCount: 3
+  position: {x: 0, y: 0}
+  restoreAfter: 0
+  trueHeading: 0
+  updateDistance: 10
+  updatePosition: 0
+  useCompassForMarker: 0
+  useGPSEmulator: 1
+--- !u!114 &1850017567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850017565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a535bd26274b9da4a85dcb372148ce3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeTexture: {fileID: 0}
+  allowAddMarkerByM: 0
+  allowZoom: 1
+  allowUserControl: 1
+  isMapDrag: 0
+  invertTouchZoom: 0
+  zoomInOnDoubleClick: 1
+  zoomMode: 0
+  activeCamera: {fileID: 1683119224}
+  allowAddMarker3DByN: 0
+  allowDefaultMarkerEvents: 1
+  allowCameraControl: 0
+  cameraAdjustTo: 0
+  cameraDistance: 100
+  cameraRotation: {x: 0, y: 0}
+  cameraSpeed: {x: 1, y: 1}
+  default3DMarker: {fileID: 0}
+  marker2DMode: 0
+  marker2DSize: 100
+  markers3D:
+  - label: 
+    range:
+      max: 20
+      min: 3
+      maxLimit: 20
+      minLimit: 3
+    _enabled: 1
+    latitude: 58.5928795021424
+    longitude: 16.1912712563026
+    _scale: 30
+    allowDefaultMarkerEvents: 0
+    control: {fileID: 0}
+    inited: 0
+    instance: {fileID: 0}
+    prefab: {fileID: 1000011151676484, guid: 8a3e475942e74e445a3d4965e0cc8661, type: 2}
+  marker3DScale: 1
+  bingAPI: 
+  checkMarker2DVisibility: 0
+  colliderType: 1
+  drawingsGameObject: {fileID: 0}
+  drawingMode: 0
+  drawingShader: {fileID: 4800000, guid: 07fd051d8972c7a4bac96bfa8038d08b, type: 3}
+  elevationZoomRange:
+    max: 20
+    min: 11
+    maxLimit: 20
+    minLimit: 3
+  elevationScale: 1
+  lockYScale: 0
+  markerMaterial: {fileID: 0}
+  markerShader: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
+  smoothZoom: 1
+  smoothZoomMinScale: -3.4028235e+38
+  smoothZoomMaxScale: 3.4028235e+38
+  smoothZoomStarted: 0
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalScale: {x: 0, y: 0, z: 0}
+  tileMaterial: {fileID: 0}
+  tilesetShader: {fileID: 4800000, guid: f65580aa9bbbd7e42b05adab01e1ca2d, type: 3}
+  useElevation: 0
+  yScaleValue: 0
+--- !u!114 &1850017568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850017565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf484bb098da8c48973c6e0076a9e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowRedraw: 1
+  control: {fileID: 0}
+  customProviderURL: http://localhost/{zoom}/{y}/{x}
+  defaultMarkerAlign: 7
+  defaultMarkerTexture: {fileID: 2800000, guid: ea7eb0aa8eaab054a91d4219f9719f63,
+    type: 3}
+  defaultTileTexture: {fileID: 0}
+  dispatchEvents: 1
+  emptyColor: {r: 1, g: 1, b: 1, a: 1}
+  height: 0
+  labels: 0
+  language: en
+  lockRedraw: 0
+  markers: []
+  needGC: 0
+  needRedraw: 1
+  notInteractUnderGUI: 1
+  provider: 2
+  mapType: osm.mapnik
+  redrawOnPlay: 0
+  renderInThread: 1
+  resourcesPath: OnlineMapsTiles/{zoom}/{x}/{y}
+  showMarkerTooltip: 0
+  smartTexture: {fileID: 0}
+  source: 0
+  stopPlayingWhenScriptsCompile: 1
+  target: 1
+  texture: {fileID: 0}
+  tilesetWidth: 1024
+  tilesetHeight: 1024
+  tilesetSize: {x: 1024, y: 1024}
+  tooltip: 
+  tooltipMarker:
+    label: 
+    range:
+      max: 20
+      min: 3
+      maxLimit: 20
+      minLimit: 3
+    _enabled: 1
+    latitude: 0
+    longitude: 0
+    _scale: 1
+  tooltipBackgroundTexture: {fileID: 2800000, guid: a8d1734e646100c4e83635fecf978e15,
+    type: 3}
+  traffic: 0
+  type: 0
+  useCurrentZoomTiles: 0
+  useSoftwareJPEGDecoder: 0
+  useSmartTexture: 1
+  useWebplayerProxy: 1
+  webplayerProxyURL: http://service.infinity-code.com/redirect.php?
+  width: 0
+  latitude: 58.587745
+  longitude: 16.192420999999968
+  _position: {x: 0, y: 0}
+  _zoom: 19
+--- !u!4 &1850017569
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850017565}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1276276419}
+  m_RootOrder: 2
+--- !u!1 &2043280840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2043280841}
+  - 114: {fileID: 2043280842}
+  m_Layer: 0
+  m_Name: LocationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2043280841
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043280840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1276276419}
+  m_RootOrder: 3
+--- !u!114 &2043280842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043280840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9866c99125e3f439ead6e5549db454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AddLocations:
+  - ID: 31
+    Title: "Kompis p\xE5 kontoret"
+    Description: Rikta kameran mot den rosa filten med texten EAST SWEDEN.
+    Image: {fileID: 21300000, guid: 50797ebe0e8ba6e4ea5a7893374b743d, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: d42ef27ebb6b0c34e82d577e090b1534,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.180531
+    Latitude: 58.589089
+    TriggerDistance: 2000
+    ARDataset: kitten_blanket_database
+    TrackedObject: {fileID: 1000014237260678, guid: 174389f849f2e834e8b86d0dbee7874c,
+      type: 2}
+  - ID: 67
+    Title: Laxholmstorget 3
+    Description: "St\xE4ll dig utanf\xF6r entr\xE9n till Laxholmstorget 3 och rikta
+      kameran mot texten p\xE5 d\xF6rren. Se bilder ovan. Klicka p\xE5 knappen STARTA
+      KAMERA."
+    Image: {fileID: 21300000, guid: 6e357dafd0cc16d47b0f820892611ea6, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: 4d1bd4122bcd2254ebb788391ce5509e,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.18054
+    Latitude: 58.58886
+    TriggerDistance: 2000
+    ARDataset: strykbraedan_logo
+    TrackedObject: {fileID: 1000010973073060, guid: f627c0dde73b8e444bd164f8b17a002b,
+      type: 2}
+  - ID: 33
+    Title: "Holmbrogr\xE4nd"
+    Description: "St\xE4ll dig framf\xF6r bilden med fabriken med skorstenarna."
+    Image: {fileID: 21300000, guid: eb32f8a2ddf62d44fa4436033df92abe, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: 65ea8573f16698c41981a873a91e97ea,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.1803253020014
+    Latitude: 58.5895258558882
+    TriggerDistance: 2000
+    ARDataset: test_database
+    TrackedObject: {fileID: 1000010764253398, guid: c7eb0d261ad61de41ada770a682ceb99,
+      type: 2}
+  - ID: 78
+    Title: "Holmbrogr\xE4nd"
+    Description: "St\xE4ll dig framf\xF6r bilden med m\xE4nniskorna som g\xE5r ut
+      genom en fabrik."
+    Image: {fileID: 21300000, guid: 6984fcf67e3edea439a64dd6af209352, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: 26ae0d5041988df4ca7827b0e67d222f,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.1803802872862
+    Latitude: 58.5896670410016
+    TriggerDistance: 2000
+    ARDataset: test_database
+    TrackedObject: {fileID: 1000011261607558, guid: bad2b2f2c0859184b890cc3a93855ac0,
+      type: 2}
+  - ID: 90
+    Title: "Holmbrogr\xE4nd"
+    Description: "St\xE4ll dig framf\xF6r bilden med mannen som g\xE5r bort\xE5t mellan
+      husen."
+    Image: {fileID: 21300000, guid: add0825517717534d9045ae5816b569d, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: 4fe0266aa196ef443adf3d50d335830c,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.18034273636
+    Latitude: 58.5895601038146
+    TriggerDistance: 2000
+    ARDataset: test_database
+    TrackedObject: {fileID: 1000011903887904, guid: 8cbd18bd903d4c9408f27ebf20ac77b3,
+      type: 2}
+  - ID: 91
+    Title: "Holmbrogr\xE4nd"
+    Description: "St\xE4ll dig framf\xF6r bilden med mannen som arbetar med en maskin."
+    Image: {fileID: 21300000, guid: 3ef28b6ec35c435468465aae6302516e, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: b0f723a7ff1dc2b4bb0bc30202813195,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.18038
+    Latitude: 58.5896
+    TriggerDistance: 2000
+    ARDataset: test_database
+    TrackedObject: {fileID: 1000012679673258, guid: 9d4953d7fa24c5147a72c9a101c5d76a,
+      type: 2}
+  - ID: 148
+    Title: "Holmbrogr\xE4nd"
+    Description: "St\xE4ll dig framf\xF6r bilden p\xE5 kvinnan med tr\xE5drullarna."
+    Image: {fileID: 21300000, guid: 62b82b551cbd0514588aeee24c737783, type: 3}
+    MarkedPreviewImage: {fileID: 21300000, guid: 0eaff9aea556e644cb469719f2032452,
+      type: 3}
+    Thumbnail: {fileID: 2800000, guid: c9abc0ceb743f294f8ab39f49587ef14, type: 3}
+    Longitude: 16.18039
+    Latitude: 58.58963
+    TriggerDistance: 2000
+    ARDataset: test_database
+    TrackedObject: {fileID: 1000011254991612, guid: e4f0f0f25cd494d4aa151473aa018780,
+      type: 2}
+  - ID: 82
+    Title: "Abrahams f\xE4rgeri"
+    Description: "St\xE4lld dig p\xE5 Bergsbron med \xF6n p\xE5 din h\xF6ger sida."
+    Image: {fileID: 21300000, guid: 3a0c9b14d28168d4cb9192b09698cb13, type: 3}
+    MarkedPreviewImage: {fileID: 0}
+    Thumbnail: {fileID: 2800000, guid: 8412b906b172e884a86471c8d539303b, type: 3}
+    Longitude: 16.17821
+    Latitude: 58.58949
+    TriggerDistance: 2000
+    ARDataset: 
+    TrackedObject: {fileID: 1000011660283686, guid: 1937c309e16b40c41821a6d9e78e34b4,
+      type: 2}
+  - ID: 80
+    Title: Bostadshuset Katscha
+    Description: "St\xE5 p\xE5 mitten av Laxholmsbron rikta kameran mot bostadshuset
+      Katscha."
+    Image: {fileID: 21300000, guid: 44715d0f34796724aad50b06fedcf9cd, type: 3}
+    MarkedPreviewImage: {fileID: 0}
+    Thumbnail: {fileID: 2800000, guid: 8412b906b172e884a86471c8d539303b, type: 3}
+    Longitude: 16.1799645448889
+    Latitude: 58.5888157280652
+    TriggerDistance: 2000
+    ARDataset: 
+    TrackedObject: {fileID: 1000011706861440, guid: f11df5b0a3bc3654b91cfce3186c7467,
+      type: 2}
